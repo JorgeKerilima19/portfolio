@@ -1,0 +1,14 @@
+.skills-container{
+  flex-wrap: wrap;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: em;
+}
+[class^="skills__"] {
+  border: thin solid black;
+  min-height: 15rem;
+  min-width: 15rem;
+}

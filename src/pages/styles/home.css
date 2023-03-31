@@ -2,16 +2,8 @@
   height: 20rem;
   margin: auto;
 }
-[class^="section"] {
-  width: 95%;
-  margin: auto;
-}
 .section__homepage {
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
   padding: 2em;
 }
 .homepage-container {

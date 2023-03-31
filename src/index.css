@@ -14,3 +14,13 @@ a {
 :root {
   --header-height: 4rem;
 }
+[class^="section"] {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  min-height: calc(100vh - var(--header-height));
+}
