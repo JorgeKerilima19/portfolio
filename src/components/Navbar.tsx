@@ -3,7 +3,7 @@ import "./styles.css";
 import { useState } from "react";
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const openNavbar = () => {
     setIsOpen(!isOpen);
@@ -35,19 +35,29 @@ export const Navbar = () => {
               }`}
             >
               <li>
-                <Link to={"/"}>Home</Link>
+                <Link onClick={openNavbar} to={"/"}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to={"/skills"}>Skills</Link>
+                <Link onClick={openNavbar} to={"/skills"}>
+                  Skills
+                </Link>
               </li>
               <li>
-                <Link to={"/about"}>About</Link>
+                <Link onClick={openNavbar} to={"/about"}>
+                  About
+                </Link>
               </li>
               <li>
-                <Link to={"/projects"}>Projects</Link>
+                <Link onClick={openNavbar} to={"/projects"}>
+                  Projects
+                </Link>
               </li>
               <li>
-                <Link to={"/contact"}>Contact</Link>
+                <Link onClick={openNavbar} to={"/contact"}>
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>
