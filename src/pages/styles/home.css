@@ -1,0 +1,23 @@
+.homepage__img {
+  height: 20rem;
+  margin: auto;
+}
+[class^="section"] {
+  width: 95%;
+  margin: auto;
+}
+.section__homepage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 2em;
+}
+.homepage-container {
+  width: max(20em, 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
