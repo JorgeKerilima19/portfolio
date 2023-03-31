@@ -2,11 +2,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto Flex", sans-serif;
 }
 html {
   font-size: max(110%, 1vw);
+  font-family: "Roboto Flex", sans-serif;
 }
 a {
   text-decoration: none;
+}
+
+:root {
+  --header-height: 4rem;
 }
