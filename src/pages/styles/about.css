@@ -1,6 +1,10 @@
+.section__about{
+  flex-direction: column;
+}
 .about-container {
   display: flex;
   flex-direction: column;
   gap: 2em;
   align-items: center;
 }
+
