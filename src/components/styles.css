@@ -67,19 +67,21 @@
   transform: translateY(-5px) rotate(-45deg);
 }
 
-@media (min-width: 720px){
-  .hamburger-btn{
+@media (min-width: 720px) {
+  .hamburger-btn {
     display: none;
   }
-  .header-container{
+  .header-container {
     justify-content: space-between;
     align-items: center;
   }
-  .header-container__nav__navbar{
+  .header-container__nav__navbar {
     transform: translate(0);
     position: static;
     flex-direction: row;
+    gap: 2em;
     width: 100%;
     height: auto;
+    font-size: 1.1em;
   }
 }
