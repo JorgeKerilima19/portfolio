@@ -8,6 +8,7 @@
   border: thin solid black;
   min-height: 18rem;
   min-width: 15rem;
+  max-width: 20rem;
 }
 .project-card__img {
   min-height: 10rem;
