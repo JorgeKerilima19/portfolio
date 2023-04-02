@@ -14,7 +14,7 @@
   position: relative;
 }
 .header-container__nav__navbar {
-  background-color: aqua;
+  background-color: white;
   position: fixed;
   left: 0;
   top: var(--header-height);
@@ -65,4 +65,21 @@
 }
 .hamburger-btn.open .bar:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
+}
+
+@media (min-width: 720px){
+  .hamburger-btn{
+    display: none;
+  }
+  .header-container{
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-container__nav__navbar{
+    transform: translate(0);
+    position: static;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
 }
