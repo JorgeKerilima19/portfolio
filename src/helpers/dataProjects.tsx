@@ -13,7 +13,10 @@ export const projectList = [
         />
       </svg>
     ),
-    projectDescription: "This is a fb Copy",
+    projectDescription:
+      "This project began as a Facebook copy, but I also use it to show my progress with new technologies",
+    projectLink: "#",
+    projectSs: "",
   },
   {
     projectName: "Guess game",
@@ -35,7 +38,8 @@ export const projectList = [
         </g>
       </svg>
     ),
-    projectDescription: "This is a fb Copy",
+    projectDescription:
+      "This project helped me to have a better understanding of OOP with JavaScript",
   },
   {
     projectName: "Html, Css + Javascript Vanilla Portfolio",

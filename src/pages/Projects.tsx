@@ -13,6 +13,12 @@ export const Projects = () => {
             <p className="project-card__description">
               {project.projectDescription}
             </p>
+            <div className="project-card__project-links">
+              <button className="project-link__button">
+                <a href={`${project.projectLink}`}>Link</a>
+              </button>
+              <button className="project-link__button">ScreenShots</button>
+            </div>
           </article>
         ))}
       </div>

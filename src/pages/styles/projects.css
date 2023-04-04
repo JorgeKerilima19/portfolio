@@ -3,29 +3,45 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2em;
-  padding: 2em;
+  padding: 2em 0;
 }
 .project-card {
   border: thin solid black;
   min-height: 18rem;
-  width: max(15rem,25%);
+  width: max(15rem, 25%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 1em;
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
 }
 .project-card__img {
   min-height: 10rem;
 }
 .project-card__title {
-  font-size: 1.2em;
-  font-weight: 500;
+  font-size: 1.35em;
+  font-weight: 400;
 }
 .project-card__description {
+  text-align: center;
   font-size: 1.1em;
   font-weight: 300;
 }
-.project-card__svg{
+.project-card__svg {
   height: 12rem;
+}
+.project-card__project-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.project-card__project-links .project-link__button:first-child {
+  border-right: thin solid red;
+}
+.project-link__button {
+  font-size: inherit;
+  padding: 0.3rem 0.5em;
+  width: 50%;
+  border: 0;
 }
