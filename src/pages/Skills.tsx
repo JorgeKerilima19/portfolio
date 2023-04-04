@@ -6,6 +6,7 @@ import {
 } from "../helpers/dataSkills";
 
 export const Skills = () => {
+  // https://devicon.dev/
   return (
     <section className="section__skills">
       <div className="skills-container">
@@ -13,7 +14,12 @@ export const Skills = () => {
           <h2>Coding Skills</h2>
           <ul>
             {codingSkills.map((skill) => (
-              <li>{skill.name}</li>
+              <li key={skill.name}>
+                <div>
+                  {skill.skillSvg}
+                  <span>{skill.name}</span>
+                </div>
+              </li>
             ))}
           </ul>
         </article>
@@ -21,7 +27,12 @@ export const Skills = () => {
           <h2>Design Skills</h2>
           <ul>
             {designSkills.map((skill) => (
-              <li>{skill.name}</li>
+              <li key={skill.name}>
+                <div>
+                  {skill.skillSvg}
+                  <span>{skill.name}</span>
+                </div>
+              </li>
             ))}
           </ul>
         </article>
@@ -29,7 +40,12 @@ export const Skills = () => {
           <h2>Currently learning</h2>
           <ul>
             {learningSkills.map((skill) => (
-              <li>{skill.name}</li>
+              <li key={skill.name}>
+                <div>
+                  {skill.skillSvg}
+                  <span>{skill.name}</span>
+                </div>
+              </li>
             ))}
           </ul>
         </article>
