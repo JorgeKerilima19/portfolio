@@ -10,41 +10,35 @@ export const Skills = () => {
   return (
     <section className="section__skills">
       <div className="skills-container">
-        <article className="skills__coding">
-          <h2>Coding Skills</h2>
-          <ul>
+        <article className="container-skills">
+          <h2 className="container-skills__title">Coding Skills</h2>
+          <ul className="skills-container__svg-container">
             {codingSkills.map((skill) => (
-              <li key={skill.name}>
-                <div>
-                  {skill.skillSvg}
-                  <span>{skill.name}</span>
-                </div>
+              <li key={skill.name} className="skill-learning__item">
+                {skill.skillSvg}
+                <span>{skill.name}</span>
               </li>
             ))}
           </ul>
         </article>
-        <article className="skills__design">
-          <h2>Design Skills</h2>
-          <ul>
+        <article className="container-skills">
+          <h2 className="container-skills__title">Design Skills</h2>
+          <ul className="skills-container__svg-container">
             {designSkills.map((skill) => (
-              <li key={skill.name}>
-                <div>
-                  {skill.skillSvg}
-                  <span>{skill.name}</span>
-                </div>
+              <li key={skill.name} className="skill-learning__item">
+                {skill.skillSvg}
+                <span>{skill.name}</span>
               </li>
             ))}
           </ul>
         </article>
-        <article className="skills__learning">
-          <h2>Currently learning</h2>
-          <ul>
+        <article className="container-skills">
+          <h2 className="container-skills__title">Currently learning</h2>
+          <ul className="skills-container__svg-container">
             {learningSkills.map((skill) => (
-              <li key={skill.name}>
-                <div>
-                  {skill.skillSvg}
-                  <span>{skill.name}</span>
-                </div>
+              <li key={skill.name} className="skill-learning__item">
+                {skill.skillSvg}
+                <span>{skill.name}</span>
               </li>
             ))}
           </ul>
