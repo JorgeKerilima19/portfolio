@@ -1,4 +1,9 @@
 import "./styles/skills.css";
+import {
+  codingSkills,
+  designSkills,
+  learningSkills,
+} from "../helpers/dataSkills";
 
 export const Skills = () => {
   return (
@@ -6,15 +11,27 @@ export const Skills = () => {
       <div className="skills-container">
         <article className="skills__coding">
           <h2>Coding Skills</h2>
-          <ul></ul>
+          <ul>
+            {codingSkills.map((skill) => (
+              <li>{skill.name}</li>
+            ))}
+          </ul>
         </article>
         <article className="skills__design">
           <h2>Design Skills</h2>
-          <ul></ul>
+          <ul>
+            {designSkills.map((skill) => (
+              <li>{skill.name}</li>
+            ))}
+          </ul>
         </article>
         <article className="skills__learning">
           <h2>Currently learning</h2>
-          <ul></ul>
+          <ul>
+            {learningSkills.map((skill) => (
+              <li>{skill.name}</li>
+            ))}
+          </ul>
         </article>
       </div>
     </section>

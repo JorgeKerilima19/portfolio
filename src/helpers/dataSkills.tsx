@@ -10,11 +10,7 @@ export const codingSkills = [
     skillSvg: <svg></svg>,
   },
   {
-    type: "language",
-    skillSvg: <svg></svg>,
-  },
-  {
-    name: "Html5",
+    name: "JavaScript",
     type: "language",
     skillSvg: <svg></svg>,
   },
