@@ -1,4 +1,14 @@
-export const projectList = [
+import { ReactElement } from "react";
+
+interface Project {
+  projectName: string;
+  projectImage: ReactElement;
+  projectDescription: string;
+  projectSs?: string;
+  projectLink?: string;
+}
+
+export const projectList: Project[] = [
   {
     projectName: "Social Rot",
     projectImage: (
