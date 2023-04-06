@@ -1,4 +1,12 @@
-export const codingSkills = [
+import { ReactElement } from "react";
+
+interface Skill {
+  name: string;
+  type?: string;
+  skillSvg: ReactElement;
+}
+
+export const codingSkills: Skill[] = [
   {
     name: "Html5",
     type: "language",
@@ -82,7 +90,7 @@ export const codingSkills = [
   },
 ];
 
-export const designSkills = [
+export const designSkills: Skill[] = [
   {
     name: "Adb Photoshop",
     skillSvg: (
@@ -174,7 +182,7 @@ export const designSkills = [
   },
 ];
 
-export const learningSkills = [
+export const learningSkills: Skill[] = [
   {
     name: "TypeScript",
     skillSvg: (
