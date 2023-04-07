@@ -1,2 +1,3 @@
 export * from "./Navbar"
-export * from "./cv"
+export * from "./Cv"
+export * from "./ProjectModal"
