@@ -37,10 +37,10 @@
   width: 50%;
   border: 0;
 }
-.card-modal{
+.card-modal {
   display: none;
 }
-.card-modal.open{
+.card-modal.open {
   background-color: hsla(0, 0%, 0%, 0.4);
   height: 100vh;
   width: 100%;
@@ -49,5 +49,11 @@
   left: 0;
   overflow-y: auto;
   z-index: 999;
-  display: flex;
+  display: grid;
+  place-items: center;
+}
+.card-modal__container {
+  background-color: azure;
+  min-width: 65%;
+  min-height: 80%;
 }
