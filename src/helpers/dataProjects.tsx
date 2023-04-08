@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-interface Project {
+export interface Project {
   projectName: string;
   projectImage: ReactElement;
   projectDescription: string;

@@ -1,14 +1,8 @@
 import { useState } from "react";
+import { Project } from "../helpers/dataProjects";
 
 interface PropsVerification {
   project: Project;
-}
-interface Project {
-  projectName: string;
-  projectImage: React.ReactElement;
-  projectDescription: string;
-  projectSs?: string;
-  projectLink?: string;
 }
 
 export const ProjectModal = ({ project }: PropsVerification) => {
