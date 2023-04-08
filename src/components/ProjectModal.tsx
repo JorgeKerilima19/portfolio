@@ -1,8 +1,7 @@
+import { useState } from "react";
+
 interface PropsVerification {
   project: Project;
-  children?: React.ReactNode;
-  open: boolean;
-  handleOpen: React.MouseEventHandler<HTMLButtonElement>;
 }
 interface Project {
   projectName: string;
@@ -12,19 +11,25 @@ interface Project {
   projectLink?: string;
 }
 
-export const ProjectModal = ({
-  project,
-  children,
-  open,
-  handleOpen,
-}: PropsVerification) => {
+export const ProjectModal = ({ project }: PropsVerification) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
-      <>{children}</>
+      <article className="project-card">
+        <>{project.projectImage}</>
+        <h3 className="project-card__title">{project.projectName}</h3>
+        <p className="project-card__description">
+          {project.projectDescription}
+        </p>
+        <button className="project-card__button" onClick={() => setOpen(!open)}>
+          more
+        </button>
+      </article>
       <div className={`card-modal ${open ? "open" : ""}`}>
         <section className="card-modal__container">
           <h3 className="project-card__title">{project.projectName}</h3>
-          <button onClick={handleOpen}>Close</button>
+          <button onClick={() => setOpen(!open)}>Close</button>
         </section>
       </div>
     </>
