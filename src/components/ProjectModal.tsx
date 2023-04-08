@@ -8,6 +8,8 @@ interface PropsVerification {
 export const ProjectModal = ({ project }: PropsVerification) => {
   const [open, setOpen] = useState(false);
 
+  const stopPropagation = (e: any) => e.stopPropagation();
+
   return (
     <>
       <article className="project-card">
@@ -20,8 +22,11 @@ export const ProjectModal = ({ project }: PropsVerification) => {
           more
         </button>
       </article>
-      <div className={`card-modal ${open ? "open" : ""}`}>
-        <section className="card-modal__container">
+      <div
+        className={`card-modal ${open ? "open" : ""}`}
+        onClick={() => setOpen(!open)}
+      >
+        <section className="card-modal__container" onClick={stopPropagation}>
           <h3 className="project-card__title">{project.projectName}</h3>
           <button onClick={() => setOpen(!open)}>Close</button>
         </section>
