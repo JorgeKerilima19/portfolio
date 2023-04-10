@@ -1,3 +1,11 @@
+.container {
+  min-width: 90%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
 .projects-container {
   display: flex;
   justify-content: center;
@@ -54,6 +62,43 @@
 }
 .card-modal__container {
   background-color: azure;
+  border-radius: 1rem;
   min-width: 65%;
   min-height: 80%;
+  padding: 2em;
+}
+.modal-project__presentation {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.project-presentation__img {
+  display: flex;
+  height: 15rem;
+  width: 100%;
+}
+.project-presentation__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.project-presentation__logo {
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  width: 8em;
+  height: 8em;
+  position: absolute;
+  bottom: 3em;
+}
+.project-presentation__title {
+  font-size: 2em;
+}
+.description__container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }

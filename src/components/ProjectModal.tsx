@@ -26,13 +26,23 @@ export const ProjectModal = ({ project }: PropsVerification) => {
         className={`card-modal ${open ? "open" : ""}`}
         onClick={() => setOpen(!open)}
       >
-        <section className="card-modal__container" onClick={stopPropagation}>
+        <section
+          className="card-modal__container container"
+          onClick={stopPropagation}
+        >
           <div className="modal-project__presentation">
-            <img src="" alt="" />
-            <svg></svg>
-            <h3 className="project-card__title">{project.projectName}</h3>
+            <div className="project-presentation__img">
+              <img
+                src="https://www.searchenginejournal.com/wp-content/uploads/2021/08/top-5-reasons-why-you-need-a-social-media-manager-616015983b3ba-sej.png"
+                alt=""
+              />
+            </div>
+            <svg className="project-presentation__logo"></svg>
+            <h3 className="project-card__title project-presentation__title ">
+              {project.projectName}
+            </h3>
           </div>
-          <div className="modal-project__description">
+          <div className="modal-project__description container">
             <section className="description__container">
               <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
@@ -47,6 +57,18 @@ export const ProjectModal = ({ project }: PropsVerification) => {
                 <li>Html</li>
                 <li>Css</li>
               </ul>
+              <div className="container__extra">
+                <ul>
+                  <h4>Extra resources</h4>
+                  <li>React Icons</li>
+                  <li>GithubPages</li>
+                </ul>
+                <ul>
+                  <h4>Links</h4>
+                  <li>PageLink</li>
+                  <li>Code</li>
+                </ul>
+              </div>
             </section>
           </div>
           <button onClick={() => setOpen(!open)}>Close</button>
