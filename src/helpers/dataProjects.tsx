@@ -4,8 +4,10 @@ export interface Project {
   projectName: string;
   projectImage: ReactElement;
   projectDescription: string;
+  projectLongDescription?: string;
   projectSs?: string;
   projectLink?: string;
+  tools?: string[];
 }
 
 export const projectList: Project[] = [
@@ -25,8 +27,11 @@ export const projectList: Project[] = [
     ),
     projectDescription:
       "This project began as a Facebook copy, but I also use it to show my progress with new technologies",
+    projectLongDescription:
+      "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     projectLink: "#",
     projectSs: "",
+    tools: ["Html5", "Css3", "JavaScript"],
   },
   {
     projectName: "Guess game",

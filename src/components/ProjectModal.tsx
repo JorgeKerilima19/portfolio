@@ -45,17 +45,23 @@ export const ProjectModal = ({ project }: PropsVerification) => {
           <div className="modal-project__description container">
             <section className="description__container">
               <span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                facilis magni possimus fuga perspiciatis quis quae tempore
-                quisquam vero maiores.
+                {project.projectLongDescription
+                  ? project.projectLongDescription
+                  : "No description has given"}
               </span>
             </section>
             <section className="description__container">
               <ul>
                 <h4>Built with</h4>
-                <li>JavaScript</li>
-                <li>Html</li>
-                <li>Css</li>
+                {project.tools ? (
+                  <>
+                    {project.tools?.map((el) => (
+                      <li>{el}</li>
+                    ))}
+                  </>
+                ) : (
+                  <span>Used tools need to be specified</span>
+                )}
               </ul>
               <div className="container__extra">
                 <ul>
