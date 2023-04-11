@@ -64,8 +64,8 @@
   background-color: azure;
   border-radius: 1rem;
   min-width: 65%;
-  min-height: 80%;
   padding: 2em;
+  position: relative;
 }
 .modal-project__presentation {
   width: 80%;
@@ -101,4 +101,15 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
+}
+.modal-project__button{
+  position: absolute;
+  right: 5%;
+  height: 3em;
+  width: 3em;
+  border: 0;
+  background-color: transparent;
+}
+.icon{
+  font-size: 2em;
 }

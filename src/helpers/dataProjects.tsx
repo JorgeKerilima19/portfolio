@@ -7,6 +7,7 @@ export interface Project {
   projectLongDescription?: string;
   projectSs?: string;
   projectLink?: string;
+  projectCodeLink?: string;
   tools?: string[];
 }
 
@@ -30,6 +31,7 @@ export const projectList: Project[] = [
     projectLongDescription:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     projectLink: "#",
+    projectCodeLink: "#",
     projectSs: "",
     tools: ["Html5", "Css3", "JavaScript"],
   },

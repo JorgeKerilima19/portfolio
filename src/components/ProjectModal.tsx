@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ImCross } from "react-icons/im";
+
 import { Project } from "../helpers/dataProjects";
 
 interface PropsVerification {
@@ -71,13 +73,22 @@ export const ProjectModal = ({ project }: PropsVerification) => {
                 </ul>
                 <ul>
                   <h4>Links</h4>
-                  <li>PageLink</li>
-                  <li>Code</li>
+                  <li>
+                    <a href={project.projectLink}>Page</a>
+                  </li>
+                  <li>
+                    <a href={project.projectCodeLink}>Code Source</a>
+                  </li>
                 </ul>
               </div>
             </section>
           </div>
-          <button onClick={() => setOpen(!open)}>Close</button>
+          <button
+            className="modal-project__button"
+            onClick={() => setOpen(!open)}
+          >
+            <ImCross className="icon" />
+          </button>
         </section>
       </div>
     </>
