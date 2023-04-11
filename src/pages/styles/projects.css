@@ -86,13 +86,18 @@
   object-fit: cover;
   border-radius: 1rem;
 }
-.project-presentation__logo {
-  background-color: rebeccapurple;
-  border-radius: 50%;
+.project-presentation__logo-container {
   width: 8em;
   height: 8em;
+  background-color: white;
+  border-radius: 50%;
   position: absolute;
   bottom: 3em;
+  display: grid;
+  place-items: center;
+}
+.project-presentation__logo {
+  height: 80%;
 }
 .project-presentation__title {
   font-size: 2em;
@@ -100,9 +105,27 @@
 .description__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   width: 80%;
 }
-.modal-project__button{
+.container__extra {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.container__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.list__header {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.modal-project__button {
   position: absolute;
   right: 5%;
   height: 3em;
@@ -110,6 +133,6 @@
   border: 0;
   background-color: transparent;
 }
-.icon{
+.icon {
   font-size: 2em;
 }

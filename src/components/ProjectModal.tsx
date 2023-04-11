@@ -39,7 +39,9 @@ export const ProjectModal = ({ project }: PropsVerification) => {
                 alt=""
               />
             </div>
-            <svg className="project-presentation__logo"></svg>
+            <div className="project-presentation__logo-container">
+              {project.projectLogo}
+            </div>
             <h3 className="project-card__title project-presentation__title ">
               {project.projectName}
             </h3>
@@ -53,8 +55,8 @@ export const ProjectModal = ({ project }: PropsVerification) => {
               </span>
             </section>
             <section className="description__container">
-              <ul>
-                <h4>Built with</h4>
+              <ul className="container__list">
+                <h4 className="list__header">Built with</h4>
                 {project.tools ? (
                   <>
                     {project.tools?.map((el) => (
@@ -66,13 +68,13 @@ export const ProjectModal = ({ project }: PropsVerification) => {
                 )}
               </ul>
               <div className="container__extra">
-                <ul>
-                  <h4>Extra resources</h4>
+                <ul className="container__list">
+                  <h4 className="list__header">Extra resources</h4>
                   <li>React Icons</li>
                   <li>GithubPages</li>
                 </ul>
-                <ul>
-                  <h4>Links</h4>
+                <ul className="container__list">
+                  <h4 className="list__header">Links</h4>
                   <li>
                     <a href={project.projectLink}>Page</a>
                   </li>

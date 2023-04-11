@@ -1,8 +1,9 @@
-import { ReactElement } from "react";
+import { ReactElement, ReactSVGElement } from "react";
 
 export interface Project {
   projectName: string;
   projectImage: ReactElement;
+  projectLogo?: ReactElement;
   projectDescription: string;
   projectLongDescription?: string;
   projectSs?: string;
@@ -17,6 +18,18 @@ export const projectList: Project[] = [
     projectImage: (
       <svg
         className="project-card__svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 55.67 78.36"
+      >
+        <path
+          fill="#f60"
+          d="M49.77 1.5v21h-3.84q-4.32-18.28-21-18.28A18.86 18.86 0 0012.89 8q-4.83 3.81-4.83 8.67a7.53 7.53 0 003.42 6.52q3.42 2.39 16.17 4.08 28 3.46 28 25.49a24.91 24.91 0 01-7.26 18.28 24.43 24.43 0 01-18 7.31q-10.59 0-20.53-8.72l-6.58 5.64H0V47.62h3.28q8.06 26.52 27.09 26.52a20.87 20.87 0 0013.12-4.59Q49.4 65 49.4 58.77c0-3.43-1.17-6-3.52-7.78s-8.67-3.37-19-4.87Q.56 42.27.56 22.68A21.07 21.07 0 017.64 6.52 24.57 24.57 0 0124.93 0 24.9 24.9 0 0143 7.13a26.44 26.44 0 003.86-5.63z"
+        />
+      </svg>
+    ),
+    projectLogo: (
+      <svg
+        className="project-presentation__logo"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 55.67 78.36"
       >
