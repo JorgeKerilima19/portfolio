@@ -59,6 +59,7 @@
   z-index: 999;
   display: grid;
   place-items: center;
+  padding: 2em 0;
 }
 .card-modal__container {
   background-color: azure;

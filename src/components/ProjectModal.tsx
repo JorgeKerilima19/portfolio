@@ -34,10 +34,7 @@ export const ProjectModal = ({ project }: PropsVerification) => {
         >
           <div className="modal-project__presentation">
             <div className="project-presentation__img">
-              <img
-                src="https://www.searchenginejournal.com/wp-content/uploads/2021/08/top-5-reasons-why-you-need-a-social-media-manager-616015983b3ba-sej.png"
-                alt=""
-              />
+              <img src={project.projectBanner} alt="Project Banner" />
             </div>
             <div className="project-presentation__logo-container">
               {project.projectLogo}
@@ -70,8 +67,9 @@ export const ProjectModal = ({ project }: PropsVerification) => {
               <div className="container__extra">
                 <ul className="container__list">
                   <h4 className="list__header">Extra resources</h4>
-                  <li>React Icons</li>
-                  <li>GithubPages</li>
+                  {project.extraResources?.map((el) => (
+                    <li>{el}</li>
+                  ))}
                 </ul>
                 <ul className="container__list">
                   <h4 className="list__header">Links</h4>

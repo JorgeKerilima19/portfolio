@@ -1,15 +1,17 @@
-import { ReactElement, ReactSVGElement } from "react";
+import { ReactElement } from "react";
 
 export interface Project {
   projectName: string;
   projectImage: ReactElement;
   projectLogo?: ReactElement;
+  projectBanner?: string;
   projectDescription: string;
   projectLongDescription?: string;
   projectSs?: string;
   projectLink?: string;
   projectCodeLink?: string;
   tools?: string[];
+  extraResources?: string[];
 }
 
 export const projectList: Project[] = [
@@ -39,6 +41,8 @@ export const projectList: Project[] = [
         />
       </svg>
     ),
+    projectBanner:
+      "https://img.freepik.com/free-vector/work-office-computer-man-woman-business-character-marketing-online-employee-technology-business-man-cartoon-co-working-flat-design-freelance_1150-41790.jpg?w=826&t=st=1681354430~exp=1681355030~hmac=fefa8613276b62679b7600bcbc8857c1b511587bc38beeeb8733e17c10cf222f",
     projectDescription:
       "This project began as a Facebook copy, but I also use it to show my progress with new technologies",
     projectLongDescription:
@@ -47,6 +51,7 @@ export const projectList: Project[] = [
     projectCodeLink: "#",
     projectSs: "",
     tools: ["Html5", "Css3", "JavaScript"],
+    extraResources: ["freepik", "GithubPages"],
   },
   {
     projectName: "Guess game",
@@ -68,8 +73,60 @@ export const projectList: Project[] = [
         </g>
       </svg>
     ),
+    projectLogo: (
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 392.404 392.404"
+        className="project-presentation__logo"
+        fill="#000000"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <path
+            fill="#FFFFFF"
+            d="M289.981,370.747V358.4c0-39.434,13.964-78.416,39.305-109.705 c23.208-28.962,31.418-51.135,30.901-87.467c0-76.8-62.513-139.313-139.313-139.313S81.561,84.428,81.561,161.228v32.388 c0,2.457-0.84,4.913-2.392,6.853l-35.103,43.507h26.57c6.012,0,10.925,4.848,10.925,10.925v32.517 c0,7.24,5.883,13.123,13.123,13.123h28.832c6.012,0,10.925,4.848,10.925,10.925v59.345h155.539V370.747z"
+          ></path>{" "}
+          <path
+            fill="#56ACE0"
+            d="M305.496,222.707c-6.012,0-10.925-4.848-10.925-10.925c0-6.012,4.848-10.925,10.925-10.925h26.246 c1.745-4.848,3.103-9.891,4.202-14.933h-49.842c-6.012,0-10.925-4.848-10.925-10.925c0-6.012,4.848-10.925,10.925-10.925h52.364 c0-1.034,0.129-2.004,0.129-3.038c0-64.84-52.687-117.527-117.527-117.527S103.541,96.194,103.541,161.034v43.96L89.9,222.125 h13.705v56.566h52.945v70.335h112.097c2.069-41.18,17.455-81.261,43.895-113.972c3.168-3.879,5.947-7.952,8.469-12.218h-15.515 V222.707z"
+          ></path>{" "}
+          <g>
+            {" "}
+            <path
+              fill="#194F82"
+              d="M226.305,62.255c-27.669-3.491-53.139,18.747-53.139,47.451c0,6.012,4.848,10.925,10.925,10.925 c6.012,0,10.925-4.848,10.925-10.925c1.228-16.679,12.218-26.958,28.962-25.794c11.636,1.293,21.463,11.055,22.82,22.82 c1.228,11.507-4.913,22.238-15.515,26.828c-12.8,5.56-21.204,18.554-21.204,33.164v21.463c0,6.012,4.848,10.925,10.925,10.925 c6.012,0,10.925-4.848,10.925-10.925v-21.463c0-5.818,3.232-11.055,7.952-13.123c19.394-8.339,30.901-28.121,28.574-49.196 C265.933,82.36,248.284,64.646,226.305,62.255z"
+            ></path>{" "}
+            <path
+              fill="#194F82"
+              d="M220.939,207.451c-6.012,0-10.925,4.848-10.925,10.925v8.727c0,6.012,4.848,10.925,10.925,10.925 c6.012,0,10.925-4.848,10.925-10.925v-8.727C231.799,212.364,226.951,207.451,220.939,207.451z"
+            ></path>{" "}
+            <path
+              fill="#194F82"
+              d="M220.939,0C132.05,0,59.775,72.275,59.775,161.099v28.509l-46.998,58.246 c-2.651,3.232-3.168,7.758-1.293,11.507c1.745,3.814,5.624,6.206,9.826,6.206h38.465v21.657c0,19.265,15.709,34.909,34.909,34.909 h18.036v59.345c0,6.012,4.848,10.925,10.925,10.925h177.261c6.012,0,10.925-4.848,10.925-10.925v-23.273 c0-34.457,12.218-68.525,34.457-96.065c23.079-28.509,35.75-64.453,35.75-101.236C382.038,72.275,309.763,0,220.939,0z M329.222,248.63c-25.341,31.354-39.305,70.335-39.305,109.77v12.347H134.442v-59.345c0-6.012-4.848-10.925-10.925-10.925H94.62 c-7.24,0-13.123-5.883-13.123-13.123v-32.517c0-6.012-4.848-10.925-10.925-10.925h-26.57l35.103-43.507 c1.552-1.939,2.392-4.331,2.392-6.853v-32.388c0-76.8,62.513-139.313,139.313-139.313s139.313,62.513,139.313,139.313 C360.769,197.43,352.494,219.669,329.222,248.63z"
+            ></path>{" "}
+          </g>{" "}
+        </g>
+      </svg>
+    ),
+    projectBanner:
+      "https://img.freepik.com/free-vector/connecting-teams-concept-landing-page_52683-27129.jpg?w=740&t=st=1681355165~exp=1681355765~hmac=18db220a6a3dd4fed01411b1a1370a6bf2923a8256637d467eff85683e26c33f",
     projectDescription:
-      "This project helped me to have a better understanding of OOP with JavaScript",
+      "With this project I learn how to properly use JavaScript to have a correct user interaction",
+    projectLongDescription:
+      "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped to practice more responsive design",
+    projectLink: "#",
+    projectCodeLink: "#",
+    projectSs: "",
+    tools: ["Html5", "Css3", "JavaScript"],
+    extraResources: ["SVGRepo", "GithubPages"],
   },
   {
     projectName: "Html, Css + Javascript Vanilla Portfolio",
