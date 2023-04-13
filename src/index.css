@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: max(110%, 1vw);
+  font-size: max(108%, 0.7vw);
   font-family: "Roboto Flex", sans-serif;
 }
 a {
@@ -15,6 +15,7 @@ a {
 :root {
   --header-height: 4rem;
   --complete-height: calc(100vh - var(--header-height));
+  --max-width: 80rem;
 }
 [class^="section"] {
   width: 95%;
@@ -26,8 +27,12 @@ a {
   min-height: var(--complete-height);
 }
 .container {
-  min-width: 90%;
+  width: min(90%, var(--max-width));
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.main{
+  margin: auto;
+  max-width: var(--max-width);
 }

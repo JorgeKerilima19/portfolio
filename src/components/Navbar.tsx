@@ -71,7 +71,7 @@ export const Navbar = () => {
           </div>
         </div>
       </header>
-      <main>
+      <main className="main">
         <Outlet />
       </main>
     </>
