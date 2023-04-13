@@ -21,11 +21,11 @@ export const Contact = () => {
               <input className="contact__form__item-input" type="text" />
             </div>
           </div>
-          <div className="contact__form__text-container">
+          <div className="contact__form__text-container container">
             <label>Message</label>
-            <textarea name=""></textarea>
+            <textarea className="contact__form__item-textarea" name=""></textarea>
           </div>
-          <button onClick={(e) => e.preventDefault()} type="submit">
+          <button className="contact__form__button" onClick={(e) => e.preventDefault()} type="submit">
             Send Message
           </button>
         </form>

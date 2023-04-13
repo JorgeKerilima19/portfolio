@@ -1,27 +1,31 @@
 .section-contact {
+  background-color: aliceblue;
 }
 .contact-wrapper {
   padding: 2em 0;
-  gap: 1em;
+  gap: 2em;
   min-height: var(--complete-height);
   justify-content: center;
 }
 .contact__title {
   font-size: 2em;
+  text-align: center;
 }
 .contact__subtitle {
   font-size: 1.3em;
   font-weight: 400;
   margin-bottom: 2em;
+  text-align: center;
 }
 .contact__form {
+  background-color: azure;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: azure;
+  gap: 2em;
   width: 100%;
-  height: min(var(--complete-height), 20rem);
+  min-height: min(var(--complete-height), 20rem);
   font-size: 1.1em;
 }
 .contact__form__inputs-container {
@@ -49,6 +53,29 @@
   background-color: inherit;
   transition: 0.5s;
 }
-.contact__form__item-input:focus{
+.contact__form__item-input:focus {
   border: thin solid black;
+}
+.contact__form__text-container {
+  gap: 1rem;
+}
+.contact__form__item-textarea {
+  height: 10rem;
+  width: max(10rem, 80%);
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5rem;
+  border: thin solid black;
+  outline: 0;
+}
+.contact__form__button {
+  height: 2em;
+  font-size: inherit;
+  padding: 0.2rem 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .contact__form__inputs-container {
+    justify-content: center;
+  }
 }
