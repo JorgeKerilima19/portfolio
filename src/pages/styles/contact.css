@@ -67,6 +67,7 @@
   padding: 0.5rem;
   border: thin solid black;
   outline: 0;
+  resize: none;
 }
 .contact__form__button {
   height: 2em;

@@ -56,8 +56,8 @@ export const ProjectModal = ({ project }: PropsVerification) => {
                 <h4 className="list__header">Built with</h4>
                 {project.tools ? (
                   <>
-                    {project.tools?.map((el) => (
-                      <li>{el}</li>
+                    {project.tools?.map((el, index) => (
+                      <li key={index}>{el}</li>
                     ))}
                   </>
                 ) : (
@@ -67,8 +67,8 @@ export const ProjectModal = ({ project }: PropsVerification) => {
               <div className="container__extra">
                 <ul className="container__list">
                   <h4 className="list__header">Extra resources</h4>
-                  {project.extraResources?.map((el) => (
-                    <li>{el}</li>
+                  {project.extraResources?.map((el, index) => (
+                    <li key={index}>{el}</li>
                   ))}
                 </ul>
                 <ul className="container__list">
