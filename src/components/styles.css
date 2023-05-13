@@ -68,7 +68,22 @@
 .hamburger-btn.open .bar:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
 }
-
+.navbar-item {
+  position: relative;
+}
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  bottom: -0.4rem;
+  left: 0;
+  background-color: black;
+  transition: width 0.5s;
+}
+.navbar-item:hover.navbar-item::after {
+  width: 110%;
+}
 @media (min-width: 720px) {
   .hamburger-btn {
     display: none;

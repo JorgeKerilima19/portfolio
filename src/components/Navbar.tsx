@@ -2,6 +2,34 @@ import { Link, Outlet } from "react-router-dom";
 import "./styles.css";
 import { useState } from "react";
 
+interface route {
+  name: string;
+  to: string;
+}
+
+const routes: route[] = [
+  {
+    name: "Home",
+    to: "/",
+  },
+  {
+    name: "Skills",
+    to: "/skills",
+  },
+  {
+    name: "About",
+    to: "/about",
+  },
+  {
+    name: "Projects",
+    to: "/projects",
+  },
+  {
+    name: "Contact",
+    to: "/contact",
+  },
+];
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -34,31 +62,11 @@ export const Navbar = () => {
                 isOpen ? "open" : ""
               }`}
             >
-              <li>
-                <Link onClick={openNavbar} to={"/"}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link onClick={openNavbar} to={"/skills"}>
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link onClick={openNavbar} to={"/about"}>
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link onClick={openNavbar} to={"/projects"}>
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link onClick={openNavbar} to={"/contact"}>
-                  Contact
-                </Link>
-              </li>
+              {routes.map((el: route) => (
+                <li className="navbar-item" onClick={openNavbar} key={el.name}>
+                  <Link to={el.to}>{el.name}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <div
