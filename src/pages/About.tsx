@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Cv } from "../components";
 
-import "./styles/about.css"
+import "./styles/about.css";
 
 export const About = () => {
   const [showCV, setShowCV] = useState(false);
@@ -14,12 +14,20 @@ export const About = () => {
     <section className="section__about">
       <div className="about-container">
         <h3>About me</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor nobis
-          consequatur obcaecati iusto quia officiis reprehenderit doloremque
-          architecto nulla? Aut iste laudantium veritatis eaque tenetur libero
-          quidem ut placeat officiis.
-        </p>
+        <div className="container">
+          <img src="" alt="" />
+          <p>
+            I am a passionate self-taught web developer. My journey started out
+            of curiosity to know how the internet and computers work. Along the
+            way I acquired new technical skills and new ways of dealing with
+            problems as well as enhancing my ability to solve problems.
+          </p>
+          <p>
+            My strongest strength is that I like to face situations that
+            challenges me and my skills, which will gain me more experience to
+            solve future alike problems faster.
+          </p>
+        </div>
       </div>
       <div>
         <button onClick={showComponentCV}>Show CV</button>
