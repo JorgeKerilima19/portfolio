@@ -133,3 +133,16 @@
 .icon {
   font-size: 2em;
 }
+@media (max-width: 720px) {
+  .container__list,
+  .container__extra {
+    width: 100%;
+  }
+  .list__header {
+    width: 100%;
+    text-align: center;
+  }
+  .card-modal__container {
+    padding: 1em;
+  }
+}
