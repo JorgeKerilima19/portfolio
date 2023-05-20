@@ -1,5 +1,5 @@
 .homepage__img {
-  height: 20rem;
+  width: max(15rem, 35%);
   margin: auto;
 }
 .section__homepage {
@@ -13,11 +13,9 @@
   align-items: center;
   gap: 2rem;
 }
-.homepage-container > * {
-  text-align: center;
-}
-@media (min-width: 720px){
-  .homepage-container>*{
+
+@media (min-width: 720px) {
+  .homepage-container > * {
     text-align: left;
   }
 }

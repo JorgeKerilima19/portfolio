@@ -26,14 +26,28 @@ a {
   gap: 2em;
   min-height: var(--complete-height);
 }
-.container {
+.container,
+.container-row {
   width: min(90%, var(--max-width));
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
 }
+.container-row {
+  flex-direction: row;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gap-2{
+  gap: 2em;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .main {
   margin: auto;
   max-width: var(--max-width);
+  padding: 1em;
 }
