@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import "./styles.css";
 import { useState } from "react";
 
@@ -64,7 +64,7 @@ export const Navbar = () => {
             >
               {routes.map((el: route) => (
                 <li className="navbar-item" onClick={openNavbar} key={el.name}>
-                  <Link to={el.to}>{el.name}</Link>
+                  <NavLink to={el.to}>{el.name}</NavLink>
                 </li>
               ))}
             </ul>
