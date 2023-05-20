@@ -49,5 +49,4 @@ a {
 .main {
   margin: auto;
   max-width: var(--max-width);
-  padding: 1em;
 }

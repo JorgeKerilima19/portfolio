@@ -14,9 +14,9 @@ export const About = () => {
     <section className="section__about">
       <div className="container gap-2">
         <h3>About me</h3>
-        <div className="container-row container-special">
+        <div className="container-row">
           <img src="../../assets/1.jpg" alt="" />
-          <div className="gap-2">
+          <div className="gap-2 section__about-container">
             <p>
               I am a passionate self-taught web developer. My journey started
               out of curiosity to know how the internet and computers work.

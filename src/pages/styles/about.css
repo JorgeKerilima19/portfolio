@@ -1,6 +1,12 @@
 .section__about {
   flex-direction: column;
 }
-.container-special > * {
-  width: max(35%, 20rem);
+.container-row img {
+  width: min(100%, 15rem);
+}
+.section__about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: min(100%, 30rem);
 }
