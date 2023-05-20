@@ -16,6 +16,10 @@ a {
   --header-height: 4rem;
   --complete-height: calc(100vh - var(--header-height));
   --max-width: 80rem;
+  --primary-color: hsl(0, 75%, 50%);
+  --text-primary-color: hsl(0, 0%, 100%);
+  --text-secondary-color: hsl(0, 0%, 0%);
+  --bg-color: hsl(0, 0%, 90%);
 }
 [class^="section"] {
   width: 95%;
@@ -40,10 +44,10 @@ a {
   flex-wrap: wrap;
   justify-content: center;
 }
-.gap-2{
+.gap-2 {
   gap: 2em;
 }
-.flex-wrap{
+.flex-wrap {
   flex-wrap: wrap;
 }
 .main {
