@@ -6,6 +6,15 @@
   flex-wrap: wrap;
   padding: 2em;
 }
+.homepage-title {
+  font-size: 2.5em;
+}
+.homepage-title span {
+  color: var(--primary-color);
+}
+.homepage-subtitle {
+  font-size: 3.5em;
+}
 .homepage-container {
   width: max(20em, 45%);
   display: flex;
