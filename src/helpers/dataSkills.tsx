@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-interface Skill {
+export interface Skill {
   name: string;
   type?: string;
   skillSvg: ReactElement;

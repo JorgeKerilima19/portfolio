@@ -3,6 +3,7 @@ import {
   codingSkills,
   designSkills,
   learningSkills,
+  Skill,
 } from "../helpers/dataSkills";
 
 import { useEffect, useState } from "react";
@@ -33,8 +34,8 @@ export const Skills = () => {
           <h2 className="container-skills__title">Coding Skills</h2>
           <div className="skills-container__svg-container">
             <h3>Languages</h3>
-            <ul>
-              {languages.map((skill) => (
+            <ul className="skills-container__svg-container">
+              {languages.map((skill: Skill) => (
                 <li key={skill.name} className="skill-learning__item">
                   {skill.skillSvg}
                   <span>{skill.name}</span>
@@ -42,8 +43,8 @@ export const Skills = () => {
               ))}
             </ul>
             <h3>Frameworks/Libraries</h3>
-            <ul>
-              {frameworkLibraries.map((skill) => (
+            <ul className="skills-container__svg-container">
+              {frameworkLibraries.map((skill: Skill) => (
                 <li key={skill.name} className="skill-learning__item">
                   {skill.skillSvg}
                   <span>{skill.name}</span>
