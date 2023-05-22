@@ -1,5 +1,6 @@
 .section-contact {
-  background-color: aliceblue;
+  border-left: thin solid var(--border-color);
+  border-right: thin solid var(--border-color);
 }
 .contact-wrapper {
   padding: 2em 0;
@@ -18,7 +19,6 @@
   text-align: center;
 }
 .contact__form {
-  background-color: azure;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,11 +42,11 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 0.2rem 0.5em;
+  border: thin solid var(--border-color);
 }
 .contact__form__item-input {
   border: thin solid transparent;
-  border-bottom: thin solid black;
-  border-right: thin solid black;
+  border-bottom: thin solid var(--primary-color);
   outline: 0;
   font-size: inherit;
   padding: 0.4rem;
@@ -54,7 +54,7 @@
   transition: 0.5s;
 }
 .contact__form__item-input:focus {
-  border: thin solid black;
+  border: thin solid var(--primary-color);
 }
 .contact__form__text-container {
   gap: 1rem;
@@ -65,7 +65,7 @@
   font-family: inherit;
   font-size: inherit;
   padding: 0.5rem;
-  border: thin solid black;
+  border: thin solid var(--border-color);
   outline: 0;
   resize: none;
 }
