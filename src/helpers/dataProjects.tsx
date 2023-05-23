@@ -14,6 +14,10 @@ export interface Project {
   extraResources?: string[];
 }
 
+export interface PropsVerification {
+  project: Project;
+}
+
 export const projectList: Project[] = [
   {
     projectName: "Social Rot",

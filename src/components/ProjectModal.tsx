@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
 
-import { Project } from "../helpers/dataProjects";
-
-interface PropsVerification {
-  project: Project;
-}
+import { PropsVerification } from "../helpers/dataProjects";
+import { ScreenShots } from "./ScreenShots";
 
 export const ProjectModal = ({ project }: PropsVerification) => {
   const [open, setOpen] = useState(false);
@@ -71,15 +68,6 @@ export const ProjectModal = ({ project }: PropsVerification) => {
                     <li key={index}>{el}</li>
                   ))}
                 </ul>
-                <ul className="container__list">
-                  <h4 className="list__header">Links</h4>
-                  <li>
-                    <a href={project.projectLink}>Page</a>
-                  </li>
-                  <li>
-                    <a href={project.projectCodeLink}>Code Source</a>
-                  </li>
-                </ul>
               </div>
             </section>
           </div>
@@ -89,6 +77,11 @@ export const ProjectModal = ({ project }: PropsVerification) => {
           >
             <ImCross className="icon" />
           </button>
+          <section className="description__container width-50">
+            <button>Links</button>
+            <button>ScreenShots</button>
+            <ScreenShots project={project}></ScreenShots>
+          </section>
         </section>
       </div>
     </>

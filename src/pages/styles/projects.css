@@ -106,13 +106,6 @@
   gap: 1rem;
   width: 80%;
 }
-.container__extra {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
 .container__list {
   display: flex;
   flex-direction: column;
@@ -134,8 +127,7 @@
   font-size: 2em;
 }
 @media (max-width: 720px) {
-  .container__list,
-  .container__extra {
+  .container__list{
     width: 100%;
   }
   .list__header {

@@ -48,6 +48,9 @@ a {
 .gap-2 {
   gap: 2em;
 }
+.width-50{
+  width: 50%;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
