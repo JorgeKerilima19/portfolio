@@ -3,7 +3,9 @@ import { PropsVerification } from "../helpers/dataProjects";
 export const ScreenShots = ({ project }: PropsVerification) => {
   return (
     <div>
-      <img src={project.projectSs} className="screen-shot-close"/>
+      {project.projectSs?.map((img, index) => (
+        <img key={index} src={img} className="screen-shot-close" />
+      ))}
     </div>
   );
 };

@@ -8,7 +8,7 @@ export interface Project {
   projectBanner?: string;
   projectDescription: string;
   projectLongDescription?: string;
-  projectSs?: any;
+  projectSs?: typeof SocialUnknown1[];
   projectLink?: string;
   projectCodeLink?: string;
   tools?: string[];
@@ -54,7 +54,7 @@ export const projectList: Project[] = [
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     projectLink: "#",
     projectCodeLink: "#",
-    projectSs: SocialUnknown1,
+    projectSs: [SocialUnknown1],
     tools: ["Html5", "Css3", "JavaScript"],
     extraResources: ["freepik", "GithubPages"],
   },
@@ -129,7 +129,7 @@ export const projectList: Project[] = [
       "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped to practice more responsive design",
     projectLink: "#",
     projectCodeLink: "#",
-    projectSs: "",
+    projectSs: [],
     tools: ["Html5", "Css3", "JavaScript"],
     extraResources: ["SVGRepo", "GithubPages"],
   },
