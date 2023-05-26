@@ -6,6 +6,7 @@ import { ScreenShots } from "./ScreenShots";
 
 export const ProjectModal = ({ project }: PropsVerification) => {
   const [open, setOpen] = useState(false);
+  const [showImages, setShowImages] = useState(false);
 
   const stopPropagation = (e: any) => e.stopPropagation();
 
@@ -77,10 +78,16 @@ export const ProjectModal = ({ project }: PropsVerification) => {
           >
             <ImCross className="icon" />
           </button>
-          <section className="description__container width-50">
+          <section className="description__container">
             <button>Links</button>
-            <button>ScreenShots</button>
-            <ScreenShots project={project}></ScreenShots>
+            <button
+              onClick={() => {
+                setShowImages(!showImages);
+              }}
+            >
+              ScreenShots
+            </button>
+            <>{showImages ? <ScreenShots project={project} /> : ""}</>
           </section>
         </section>
       </div>

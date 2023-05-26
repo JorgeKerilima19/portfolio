@@ -110,6 +110,11 @@
 .navbar-item:hover.navbar-item::after {
   width: 110%;
 }
+.screen-shot-close{
+  width: 100%;
+}
+
+
 @media (min-width: 720px) {
   .hamburger-btn {
     display: none;

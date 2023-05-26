@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import SocialUnknown1 from "../../assets/ScreenShoots/SocialUnknown1.png";
 
 export interface Project {
   projectName: string;
@@ -7,7 +8,7 @@ export interface Project {
   projectBanner?: string;
   projectDescription: string;
   projectLongDescription?: string;
-  projectSs?: string;
+  projectSs?: any;
   projectLink?: string;
   projectCodeLink?: string;
   tools?: string[];
@@ -53,7 +54,7 @@ export const projectList: Project[] = [
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     projectLink: "#",
     projectCodeLink: "#",
-    projectSs: "",
+    projectSs: SocialUnknown1,
     tools: ["Html5", "Css3", "JavaScript"],
     extraResources: ["freepik", "GithubPages"],
   },
