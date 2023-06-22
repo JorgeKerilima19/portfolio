@@ -72,7 +72,15 @@
 .contact__form__button {
   height: 2em;
   font-size: inherit;
-  padding: 0.2rem 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: transparent;
+  background-color: red;
+  color: white;
+}
+.contact__form__button:hover{
+  background-color: rgb(165, 10, 10);
 }
 
 @media (max-width: 720px) {
