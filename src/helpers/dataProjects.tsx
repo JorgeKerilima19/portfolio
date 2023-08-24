@@ -8,7 +8,7 @@ export interface Project {
   projectBanner?: string;
   projectDescription: string;
   projectLongDescription?: string;
-  projectSs?: typeof SocialUnknown1[];
+  projectSs?: (typeof SocialUnknown1)[];
   projectLink?: string;
   projectCodeLink?: string;
   tools?: string[];
@@ -56,7 +56,7 @@ export const projectList: Project[] = [
     projectCodeLink: "#",
     projectSs: [SocialUnknown1],
     tools: ["Html5", "Css3", "JavaScript"],
-    extraResources: ["freepik", "GithubPages"],
+    extraResources: ["freepik", "GithubPages", "Lorem Picsum"],
   },
   {
     projectName: "Guess game",
@@ -144,9 +144,14 @@ export const projectList: Project[] = [
     projectDescription: "This is a fb Copy",
   },
   {
-    projectName: "React trip page",
+    projectName: "Social Travel",
     projectImage: <svg className="project-card__img"></svg>,
-    projectDescription: "This is a fb Copy",
+    projectDescription:
+      "This was one of my first react application I came back to it to simplify the CSS code and proper use of React hooks",
+    projectLongDescription:
+      "I learn how to use the hooks and also the usage of useContext hook for large applications ",
+    tools: ["Html5", "Css3", "React Js"],
+    extraResources: ["Unsplash", "Google Images", "Wikipedia"],
   },
   {
     projectName: "React Pokedex",

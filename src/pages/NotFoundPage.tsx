@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../index.css";
 import "./styles/404.css"
 
-import img from "../../public/404.svg";
+import img from "../svgs/404.svg";
 
 export const NotFoundPage = () => {
   return (
