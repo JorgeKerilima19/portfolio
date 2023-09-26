@@ -11,7 +11,7 @@ export const HomePage = () => {
         <p>Self-taught frontend developer seeking a full-stack career</p>
       </div>
       <div className="homepage-container">
-        <img className="homepage__img" src="../../assets/1.jpg" alt="" />
+        <img className="homepage__img" src="../../assets/1.png" alt="" />
       </div>
     </section>
   );

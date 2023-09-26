@@ -15,7 +15,7 @@ export const About = () => {
       <div className="container gap-2">
         <h3>About me</h3>
         <div className="container-row">
-          <img src="../../assets/1.jpg" alt="" />
+          <img src="../../assets/1.png" alt="" />
           <div className="gap-2 section__about-container">
             <p>
               I am a passionate self-taught web developer. My journey started
