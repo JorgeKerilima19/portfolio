@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, createBrowserRouter } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import {
   About,
@@ -8,6 +8,21 @@ import {
   Projects,
   Skills,
 } from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navbar />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/projects", element: <Projects /> },
+      { path: "/skills", element: <Skills /> },
+      { path: "*", element: <NotFoundPage /> },
+    ],
+  },
+]);
 
 function App() {
   return (
