@@ -1,6 +1,8 @@
 import "./styles/home.css";
 import profile from "/assets/1.png"
 
+import vite from "/vite.svg"
+
 export const HomePage = () => {
   return (
     <section className="section__homepage">
@@ -11,6 +13,7 @@ export const HomePage = () => {
         </h1>
         <p>Self-taught frontend developer seeking a full-stack career</p>
       </div>
+      <img src={vite} alt="" />
       <div className="homepage-container">
         <img className="homepage__img" src={profile} alt="" />
       </div>
