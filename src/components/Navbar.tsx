@@ -10,23 +10,23 @@ interface route {
 const routes: route[] = [
   {
     name: "Home",
-    to: "/",
+    to: "/portfolio/",
   },
   {
     name: "Skills",
-    to: "/skills",
+    to: "/portfolio/skills",
   },
   {
     name: "About",
-    to: "/about",
+    to: "/portfolio/about",
   },
   {
     name: "Projects",
-    to: "/projects",
+    to: "/portfolio/projects",
   },
   {
     name: "Contact",
-    to: "/contact",
+    to: "/portfolio/contact",
   },
 ];
 
