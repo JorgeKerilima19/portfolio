@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Cv } from "../components";
 
+import profile from "/assets/1.png";
+
 import "./styles/about.css";
 
 export const About = () => {
@@ -15,7 +17,7 @@ export const About = () => {
       <div className="container gap-2">
         <h3>About me</h3>
         <div className="container-row">
-          <img src="../../assets/1.png" alt="" />
+          <img src={profile} alt="" />
           <div className="gap-2 section__about-container">
             <p>
               I am a passionate self-taught web developer. My journey started

@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import SocialUnknown1 from "../../assets/ScreenShoots/SocialUnknown1.png";
+import SocialUnknown1 from "/assets/ScreenShoots/SocialUnknown1.png";
 
 export interface Project {
   projectName: string;

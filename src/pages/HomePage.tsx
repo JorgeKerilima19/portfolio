@@ -1,4 +1,5 @@
 import "./styles/home.css";
+import profile from "/assets/1.png"
 
 export const HomePage = () => {
   return (
@@ -11,7 +12,7 @@ export const HomePage = () => {
         <p>Self-taught frontend developer seeking a full-stack career</p>
       </div>
       <div className="homepage-container">
-        <img className="homepage__img" src="../../assets/1.png" alt="" />
+        <img className="homepage__img" src={profile} alt="" />
       </div>
     </section>
   );
