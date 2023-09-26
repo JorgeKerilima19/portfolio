@@ -14,7 +14,7 @@ a {
 
 :root {
   --header-height: 4rem;
-  --border-color:hsl(0,0%,0%);
+  --border-color: hsl(0, 0%, 0%);
   --complete-height: calc(100vh - var(--header-height));
   --max-width: 80rem;
   --primary-color: hsl(0, 75%, 50%);
@@ -50,6 +50,10 @@ a {
 }
 .flex-wrap {
   flex-wrap: wrap;
+}
+#root {
+  background: url("/1.png") no-repeat fixed center;
+  background-size: cover;
 }
 .main {
   margin: auto;
