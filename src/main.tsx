@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+
 import "./index.css";
+import "./main.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { Navbar } from "./components/Navbar";
@@ -13,6 +14,7 @@ import {
   Projects,
   Skills,
 } from "./pages";
+import { AppContextProvider } from "./context/AppContextProvider";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AppContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AppContextProvider>
   </React.StrictMode>
 );

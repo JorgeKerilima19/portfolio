@@ -2,6 +2,7 @@ import "./styles/home.css";
 import profile from "/assets/1.png";
 
 export const HomePage = () => {
+
   return (
     <section className="section__homepage">
       <div className="homepage-container">
