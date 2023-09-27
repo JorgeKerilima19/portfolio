@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "./styles.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import AppContext from "../context/Appcontext";
 
 interface route {
   name: string;
@@ -31,15 +32,19 @@ const routes: route[] = [
 ];
 
 export const Navbar = () => {
+  const { showNavbar } = useContext(AppContext);
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const openNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  console.log(showNavbar);
+
   return (
     <>
-      <header className="header">
+      <header className={`header ${showNavbar ? "navbarShow " : ""}`}>
         <div className="header-container">
           <div>
             <svg

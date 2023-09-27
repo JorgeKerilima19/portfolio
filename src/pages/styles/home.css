@@ -22,6 +22,21 @@
   align-items: center;
   gap: 2rem;
 }
+.navbarShow {
+  position: relative;
+  transform: translateY(-3rem);
+  transition: 0.3s ease-in-out;
+}
+.navbarShow > * {
+  opacity: 0.4;
+  transition: 0.5s ease-in;
+}
+.navbarShow:hover {
+  transform: translateY(0);
+}
+.navbarShow:hover > * {
+  opacity: 1;
+}
 
 @media (max-width: 720px) {
   .homepage-container > * {
