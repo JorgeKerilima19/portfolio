@@ -40,11 +40,9 @@ export const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  console.log(showNavbar);
-
   return (
     <>
-      <header className={`header ${showNavbar ? "navbarShow " : ""}`}>
+      <header className={`header ${showNavbar ? "navbarShow" : ""}`}>
         <div className="header-container">
           <div>
             <svg

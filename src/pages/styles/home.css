@@ -23,7 +23,6 @@
   gap: 2rem;
 }
 .navbarShow {
-  position: relative;
   transform: translateY(-3rem);
   transition: 0.3s ease-in-out;
 }
@@ -32,6 +31,8 @@
   transition: 0.5s ease-in;
 }
 .navbarShow:hover {
+  position: sticky;
+  top: 0;
   transform: translateY(0);
 }
 .navbarShow:hover > * {
