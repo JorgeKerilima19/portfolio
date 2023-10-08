@@ -14,10 +14,6 @@ const routes: route[] = [
     to: "/portfolio/",
   },
   {
-    name: "Skills",
-    to: "/portfolio/skills",
-  },
-  {
     name: "About",
     to: "/portfolio/about",
   },

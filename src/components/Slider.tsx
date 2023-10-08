@@ -40,11 +40,15 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
   }, [windowSize]);
 
   return (
-    <div className="h-screen w-full flex items-center justify-center pt-8 gap-5">
+    <div className="h-screen w-full flex items-center justify-center pt-8 gap-5 relative">
+      <div>
+
+      </div>
       {array.map((slide, index) => {
         if (index < sizeLimit) {
           return (
             <Card
+              key={index}
               title={slide.projectName}
               img={slide.projectBanner}
               description={slide.projectDescription}

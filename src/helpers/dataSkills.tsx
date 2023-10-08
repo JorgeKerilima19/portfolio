@@ -92,7 +92,7 @@ export const codingSkills: Skill[] = [
     name: "Material-UI",
     type: "library/framework",
     skillSvg: (
-      <svg viewBox="0 0 128 128">
+      <svg viewBox="0 0 128 128" className="skill__svg">
         <path
           fill="#1FA6CA"
           d="M.2 68.6V13.4L48 41v18.4L16.1 41v36.8L.2 68.6zM48 41l47.9-27.6v55.3L64 87l-16-9.2 32-18.4V41L48 59.4V41z"
