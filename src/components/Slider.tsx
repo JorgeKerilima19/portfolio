@@ -8,7 +8,6 @@ export interface Card {
   img: any;
   description: string;
   index: number;
-  currentItem: number;
 }
 
 export const Slider = ({ sizes, array }: SliderProperties) => {
@@ -16,6 +15,7 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
 
   const [sizeLimit, setSizeLimit] = useState(0);
   const [currentItem, setCurrentItem] = useState(0);
+  const [jump, setJump] = useState(1);
 
   const handleSize = () => {
     if (windowSize > sizes.s.size) {
@@ -34,14 +34,14 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
       setCurrentItem(0);
       return;
     }
-    setCurrentItem((currentItem) => currentItem + 1);
+    setCurrentItem((prevIndex) => (prevIndex + sizeLimit) % array.length);
   };
+
   const goPrevItem = () => {
-    if (currentItem <= 0) {
-      setCurrentItem(array.length - 1);
-      return;
-    }
-    setCurrentItem((currentItem) => currentItem - 1);
+    setCurrentItem((prevIndex) => {
+      const newIndex = prevIndex - sizeLimit;
+      return newIndex < 0 ? array.length - sizeLimit : newIndex;
+    });
   };
 
   useEffect(() => {
@@ -58,20 +58,17 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
           {">"}
         </button>
       </div>
-      <div className="flex w-full gap-5 slider-container">
-        {array.map((slide, index) => {
-          if (sizeLimit) {
-            return (
-              <SliderCard
-                key={index}
-                title={slide.projectName}
-                img={slide.projectBanner}
-                description={slide.projectDescription}
-                index={index}
-                currentItem={currentItem}
-              />
-            );
-          }
+      <div className="flex w-full gap-5 slider-container items-center justify-center">
+        {array.slice(currentItem, currentItem + 2).map((slide, index) => {
+          return (
+            <SliderCard
+              key={index}
+              title={slide.projectName}
+              img={slide.projectBanner}
+              description={slide.projectDescription}
+              index={index}
+            />
+          );
         })}
       </div>
     </div>

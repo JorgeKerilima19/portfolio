@@ -136,10 +136,6 @@
   display: flex;
   flex-direction: column;
 }
-.slide.prev {
-}
-.slide.next {
-}
 
 @media (max-width: 720px) {
   .container__list {
