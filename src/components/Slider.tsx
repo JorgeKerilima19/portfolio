@@ -7,7 +7,6 @@ export interface Card {
   title: string;
   img: any;
   description: string;
-  index: number;
 }
 
 export const Slider = ({ sizes, array }: SliderProperties) => {
@@ -15,7 +14,6 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
 
   const [sizeLimit, setSizeLimit] = useState(0);
   const [currentItem, setCurrentItem] = useState(0);
-  const [jump, setJump] = useState(1);
 
   const handleSize = () => {
     if (windowSize > sizes.s.size) {
@@ -59,17 +57,18 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
         </button>
       </div>
       <div className="flex w-full gap-5 slider-container items-center justify-center">
-        {array.slice(currentItem, currentItem + 2).map((slide, index) => {
-          return (
-            <SliderCard
-              key={index}
-              title={slide.projectName}
-              img={slide.projectBanner}
-              description={slide.projectDescription}
-              index={index}
-            />
-          );
-        })}
+        {array
+          .slice(currentItem, currentItem + sizeLimit)
+          .map((slide, index) => {
+            return (
+              <SliderCard
+                key={index}
+                title={slide.projectName}
+                img={slide.projectBanner}
+                description={slide.projectDescription}
+              />
+            );
+          })}
       </div>
     </div>
   );
