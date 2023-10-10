@@ -56,7 +56,7 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
           {">"}
         </button>
       </div>
-      <div className="flex w-full gap-5 slider-container items-center justify-center">
+      <div className="flex w-full gap-5 items-center justify-center">
         {array
           .slice(currentItem, currentItem + sizeLimit)
           .map((slide, index) => {

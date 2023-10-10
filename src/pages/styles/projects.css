@@ -126,16 +126,6 @@
 .icon {
   font-size: 2em;
 }
-.slider-container {
-  overflow: hidden;
-}
-.slide {
-  display: none;
-}
-.slide.current {
-  display: flex;
-  flex-direction: column;
-}
 
 @media (max-width: 720px) {
   .container__list {
