@@ -11,6 +11,15 @@
 ul {
   list-style: none;
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.static {
+  position: static;
+}
 .border-solid {
   border-style: solid;
 }
