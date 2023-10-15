@@ -47,7 +47,7 @@ export const Projects = () => {
       <div className="projects-container">
         {data.map((project, index) => (
           // <ProjectModal project={project} key={index} />
-          <ProjectCard project={project}/>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </section>

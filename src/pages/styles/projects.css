@@ -94,7 +94,8 @@
   place-items: center;
 }
 .project-presentation__logo {
-  height: 80%;
+  height: 10rem;
+
 }
 .project-presentation__title {
   font-size: 2em;

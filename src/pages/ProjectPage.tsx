@@ -2,6 +2,6 @@ import { useParams } from "react-router-dom";
 
 export const ProjectPage = () => {
   const { id } = useParams();
-  
-  return <div>ProjectPage</div>;
+
+  return <div>ProjectPage {id}</div>;
 };
