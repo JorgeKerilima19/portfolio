@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import SocialUnknown1 from "/assets/ScreenShoots/SocialUnknown1.png";
 
 export interface Project {
+  projectId: number;
   projectName: string;
   projectImage: ReactElement;
   projectLogo?: ReactElement;
@@ -21,6 +22,7 @@ export interface PropsVerification {
 
 export const projectList: Project[] = [
   {
+    projectId: 1,
     projectName: "Social Rot",
     projectImage: (
       <svg
@@ -59,6 +61,7 @@ export const projectList: Project[] = [
     extraResources: ["freepik", "GithubPages", "Lorem Picsum"],
   },
   {
+    projectId: 2,
     projectName: "Guess game",
     projectImage: (
       <svg
@@ -134,16 +137,19 @@ export const projectList: Project[] = [
     extraResources: ["SVGRepo", "GithubPages"],
   },
   {
+    projectId: 3,
     projectName: "Html, Css + Javascript Vanilla Portfolio",
     projectImage: <svg className="project-card__img"></svg>,
     projectDescription: "This is a fb Copy",
   },
   {
+    projectId: 4,
     projectName: "React task manager",
     projectImage: <svg className="project-card__img"></svg>,
     projectDescription: "This is a fb Copy",
   },
   {
+    projectId: 5,
     projectName: "Social Travel",
     projectImage: <svg className="project-card__img"></svg>,
     projectDescription:
@@ -154,6 +160,7 @@ export const projectList: Project[] = [
     extraResources: ["Unsplash", "Google Images", "Wikipedia"],
   },
   {
+    projectId: 6,
     projectName: "React Pokedex",
     projectImage: <svg className="project-card__img"></svg>,
     projectDescription: "This is a fb Copy",

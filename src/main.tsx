@@ -12,7 +12,7 @@ import {
   HomePage,
   NotFoundPage,
   Projects,
-  Skills,
+  ProjectPage,
 } from "./pages";
 import { AppContextProvider } from "./context/AppContextProvider";
 
@@ -25,8 +25,16 @@ const router = createBrowserRouter([
       { path: "/portfolio", element: <HomePage /> },
       { path: "/portfolio/about", element: <About /> },
       { path: "/portfolio/contact", element: <Contact /> },
-      { path: "/portfolio/projects", element: <Projects /> },
-      { path: "/portfolio/skills", element: <Skills /> },
+      {
+        path: "/portfolio/projects",
+        element: <Projects />,
+        children: [
+          {
+            path: "./:id",
+            element: <ProjectPage />,
+          },
+        ],
+      },
       { path: "*", element: <NotFoundPage /> },
     ],
   },
