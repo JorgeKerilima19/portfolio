@@ -95,7 +95,6 @@
 }
 .project-presentation__logo {
   height: 10rem;
-
 }
 .project-presentation__title {
   font-size: 2em;
@@ -128,6 +127,20 @@
   font-size: 2em;
 }
 
+.project-info__main-container {
+  width: min(40%, 20rem);
+  height: 20rem;
+  background-color: brown;
+}
+.project-info__details-container {
+  width: 70%;
+  height: 20rem;
+  background-color: brown;
+}
+.project-main__container {
+  align-content: start;
+}
+
 @media (max-width: 720px) {
   .container__list {
     width: 100%;
@@ -138,5 +151,11 @@
   }
   .card-modal__container {
     padding: 1em;
+  }
+  .project-main__container {
+    flex-direction: column;
+  }
+  .project-main__container > * {
+    width: 100%;
   }
 }

@@ -12,8 +12,9 @@ export const ProjectPage = () => {
   }, []);
 
   return (
-    <section className="h-screen px-5 py-5">
-      ProjectPage {project?.projectDescription}
+    <section className="h-screen px-5 py-5 flex gap-8 items-start justify-start project-main__container">
+      <div className="project-info__main-container"></div>
+      <div className="project-info__details-container"></div>
     </section>
   );
 };
