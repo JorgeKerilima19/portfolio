@@ -129,16 +129,22 @@
 
 .project-info__main-container {
   width: min(40%, 20rem);
-  height: 20rem;
-  background-color: brown;
+  border: thin solid black;
 }
 .project-info__details-container {
-  width: 70%;
+  width: 80%;
   height: 20rem;
-  background-color: brown;
+  border: thin solid black;
 }
 .project-main__container {
   align-content: start;
+}
+.project-link__button {
+  background-color: var(--primary-color);
+  outline: transparent;
+  border: 0;
+  color: var(--text-primary-color);
+  width: 100%;
 }
 
 @media (max-width: 720px) {

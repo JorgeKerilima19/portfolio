@@ -11,6 +11,18 @@
 ul {
   list-style: none;
 }
+button {
+  font-size: inherit;
+}
+.list-inside {
+  list-style-position: inside;
+}
+.list-outside {
+  list-style-position: outside;
+}
+.list-dot {
+  list-style: circle;
+}
 .absolute {
   position: absolute;
 }
@@ -659,6 +671,24 @@ ul {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.text-center {
+  text-align: center;
+}
+.text-start {
+  text-align: start;
+}
+.text-end {
+  text-align: end;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
 }
 .w-full {
   width: 100%;
