@@ -63,9 +63,9 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
             return (
               <SliderCard
                 key={index}
-                title={slide.projectName}
-                img={slide.projectBanner}
-                description={slide.projectDescription}
+                title={slide.name}
+                img={slide.banner}
+                description={slide.overview}
               />
             );
           })}

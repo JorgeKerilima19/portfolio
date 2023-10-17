@@ -2,29 +2,25 @@ import { ReactElement } from "react";
 import SocialUnknown1 from "/assets/ScreenShoots/SocialUnknown1.png";
 
 export interface Project {
-  projectId: number;
-  projectName: string;
-  projectImage: ReactElement;
-  projectLogo?: ReactElement;
-  projectBanner?: string;
-  projectDescription: string;
-  projectLongDescription?: string;
-  projectSs?: (typeof SocialUnknown1)[];
-  projectLink?: string;
-  projectCodeLink?: string;
+  id: number;
+  name: string;
+  image: ReactElement;
+  logo?: ReactElement;
+  banner?: string;
+  overview: string;
+  description?: string;
+  screenShoots?: (typeof SocialUnknown1)[];
+  link?: string;
+  codeSource?: string;
   tools?: string[];
   extraResources?: string[];
 }
 
-export interface PropsVerification {
-  project: Project;
-}
-
 export const projectList: Project[] = [
   {
-    projectId: 1,
-    projectName: "Social Rot",
-    projectImage: (
+    id: 1,
+    name: "Social Rot",
+    image: (
       <svg
         className="project-card__svg"
         xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +32,7 @@ export const projectList: Project[] = [
         />
       </svg>
     ),
-    projectLogo: (
+    logo: (
       <svg
         className="project-presentation__logo"
         xmlns="http://www.w3.org/2000/svg"
@@ -48,22 +44,22 @@ export const projectList: Project[] = [
         />
       </svg>
     ),
-    projectBanner:
+    banner:
       "https://img.freepik.com/free-vector/work-office-computer-man-woman-business-character-marketing-online-employee-technology-business-man-cartoon-co-working-flat-design-freelance_1150-41790.jpg?w=826&t=st=1681354430~exp=1681355030~hmac=fefa8613276b62679b7600bcbc8857c1b511587bc38beeeb8733e17c10cf222f",
-    projectDescription:
+    overview:
       "This project began as a Facebook copy, but I also use it to show my progress with new technologies",
-    projectLongDescription:
+    description:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
-    projectLink: "#",
-    projectCodeLink: "#",
-    projectSs: [SocialUnknown1],
+    link: "#",
+    codeSource: "#",
+    screenShoots: [SocialUnknown1],
     tools: ["Html5", "Css3", "JavaScript"],
     extraResources: ["freepik", "GithubPages", "Lorem Picsum"],
   },
   {
-    projectId: 2,
-    projectName: "Guess game",
-    projectImage: (
+    id: 2,
+    name: "Guess game",
+    image: (
       <svg
         fill="currentColor"
         viewBox="0 0 100 100"
@@ -81,7 +77,7 @@ export const projectList: Project[] = [
         </g>
       </svg>
     ),
-    projectLogo: (
+    logo: (
       <svg
         version="1.1"
         id="Layer_1"
@@ -124,45 +120,45 @@ export const projectList: Project[] = [
         </g>
       </svg>
     ),
-    projectBanner:
+    banner:
       "https://img.freepik.com/free-vector/connecting-teams-concept-landing-page_52683-27129.jpg?w=740&t=st=1681355165~exp=1681355765~hmac=18db220a6a3dd4fed01411b1a1370a6bf2923a8256637d467eff85683e26c33f",
-    projectDescription:
+    overview:
       "With this project I learn how to properly use JavaScript to have a correct user interaction",
-    projectLongDescription:
+    description:
       "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped to practice more responsive design",
-    projectLink: "#",
-    projectCodeLink: "#",
-    projectSs: [],
+    link: "#",
+    codeSource: "#",
+    screenShoots: [],
     tools: ["Html5", "Css3", "JavaScript"],
     extraResources: ["SVGRepo", "GithubPages"],
   },
   {
-    projectId: 3,
-    projectName: "Html, Css + Javascript Vanilla Portfolio",
-    projectImage: <svg className="project-card__img"></svg>,
-    projectDescription: "This is a fb Copy",
+    id: 3,
+    name: "Html, Css + Javascript Vanilla Portfolio",
+    image: <svg className="project-card__img"></svg>,
+    overview: "This is a fb Copy",
   },
   {
-    projectId: 4,
-    projectName: "React task manager",
-    projectImage: <svg className="project-card__img"></svg>,
-    projectDescription: "This is a fb Copy",
+    id: 4,
+    name: "React task manager",
+    image: <svg className="project-card__img"></svg>,
+    overview: "This is a fb Copy",
   },
   {
-    projectId: 5,
-    projectName: "Social Travel",
-    projectImage: <svg className="project-card__img"></svg>,
-    projectDescription:
+    id: 5,
+    name: "Social Travel",
+    image: <svg className="project-card__img"></svg>,
+    overview:
       "This was one of my first react application I came back to it to simplify the CSS code and proper use of React hooks",
-    projectLongDescription:
+    description:
       "I learn how to use the hooks and also the usage of useContext hook for large applications ",
     tools: ["Html5", "Css3", "React Js"],
     extraResources: ["Unsplash", "Google Images", "Wikipedia"],
   },
   {
-    projectId: 6,
-    projectName: "React Pokedex",
-    projectImage: <svg className="project-card__img"></svg>,
-    projectDescription: "This is a fb Copy",
+    id: 6,
+    name: "React Pokedex",
+    image: <svg className="project-card__img"></svg>,
+    overview: "This is a fb Copy",
   },
 ];

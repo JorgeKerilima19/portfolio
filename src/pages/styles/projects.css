@@ -133,8 +133,8 @@
 }
 .project-info__details-container {
   width: 80%;
-  height: 20rem;
   border: thin solid black;
+  max-height: var(--complete-height);
 }
 .project-main__container {
   align-content: start;
@@ -145,6 +145,11 @@
   border: 0;
   color: var(--text-primary-color);
   width: 100%;
+}
+.project-img {
+  width: max(15rem, 90%);
+  height: 20rem;
+  object-fit: cover;
 }
 
 @media (max-width: 720px) {

@@ -41,6 +41,15 @@ button {
 .border-1 {
   border-width: 0.1rem;
 }
+.self-center {
+  align-self: center;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
 .flex {
   display: flex;
 }
@@ -672,6 +681,12 @@ button {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-y-scroll {
+  overflow-y: auto;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
 .text-center {
   text-align: center;
 }
@@ -680,6 +695,12 @@ button {
 }
 .text-end {
   text-align: end;
+}
+.text-title {
+  font-size: 2rem;
+}
+.text-subtitle {
+  font-size: 1.5rem;
 }
 .text-justify {
   text-align: justify;
