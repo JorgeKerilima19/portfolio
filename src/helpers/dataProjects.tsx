@@ -14,6 +14,10 @@ export interface Project {
   codeSource?: string;
   tools?: string[];
   extraResources?: string[];
+  lesson?: string;
+  usage?: string;
+  installation?: string;
+  status?: boolean;
 }
 
 export const projectList: Project[] = [

@@ -26,34 +26,39 @@ export const ProjectFullInfo = ({ project }: { project: Project }) => {
           assumenda autem nisi?
         </span>
       </div>
-      <div>
-        {project.screenShoots?.map((img) => (
-          <img src={img} className="w-full" />
+      <div className="h-max-20 h-min-20 w-full flex overflow-auto overflow-y-hidden gap-4">
+        {project.screenShoots?.map((img, index) => (
+          <>
+            <img key={index} src={img} className="project-img" />
+            <img key={index} src={img} className="project-img" />
+          </>
         ))}
       </div>
-      <div className="grid gap-5">
-        <h4>Usage and Installation</h4>
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
-          vero eaque molestiae consectetur consequuntur qui, reiciendis velit
-          assumenda autem nisi?
-        </span>
-      </div>
-      <div className="grid gap-5">
-        <h4>Features?</h4>
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
-          vero eaque molestiae consectetur consequuntur qui, reiciendis velit
-          assumenda autem nisi?
-        </span>
-      </div>
-      <div className="grid gap-5">
-        <h4>Status?</h4>
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
-          vero eaque molestiae consectetur consequuntur qui, reiciendis velit
-          assumenda autem nisi?
-        </span>
+      <div className="flex gap-5 flex-wrap">
+        <div className="grid gap-5 w-max-15">
+          <h4>Usage and Installation</h4>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+            vero eaque molestiae consectetur consequuntur qui, reiciendis velit
+            assumenda autem nisi?
+          </span>
+        </div>
+        <div className="grid gap-5 w-max-15">
+          <h4>Features?</h4>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+            vero eaque molestiae consectetur consequuntur qui, reiciendis velit
+            assumenda autem nisi?
+          </span>
+        </div>
+        <div className="grid gap-5 w-max-15 justify-btw">
+          <h4>Status?</h4>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+            vero eaque molestiae consectetur consequuntur qui, reiciendis velit
+            assumenda autem nisi?
+          </span>
+        </div>
       </div>
     </div>
   );
