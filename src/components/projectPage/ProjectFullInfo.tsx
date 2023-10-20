@@ -1,4 +1,5 @@
 import { Project } from "../../helpers/dataProjects";
+import { ProjectImg } from "./ProjectImg";
 
 export const ProjectFullInfo = ({ project }: { project: Project }) => {
   return (
@@ -28,13 +29,10 @@ export const ProjectFullInfo = ({ project }: { project: Project }) => {
       </div>
       <div className="h-max-20 h-min-20 w-full flex overflow-auto overflow-y-hidden gap-4">
         {project.screenShoots?.map((img, index) => (
-          <>
-            <img key={index} src={img} className="project-img" />
-            <img key={index} src={img} className="project-img" />
-          </>
+          <ProjectImg img={img} key={index} />
         ))}
       </div>
-      <div className="flex gap-5 flex-wrap">
+      <div className="flex gap-5 flex-wrap justify-center p-5">
         <div className="grid gap-5 w-max-15">
           <h4>Usage and Installation</h4>
           <span>

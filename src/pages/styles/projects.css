@@ -151,7 +151,19 @@
   height: 20rem;
   object-fit: cover;
 }
-
+.project-img__open {
+  width: min(90%, 60rem);
+}
+.project-img-container {
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.219);
+  height: var(--complete-height);
+}
 @media (max-width: 720px) {
   .container__list {
     width: 100%;
