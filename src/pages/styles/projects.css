@@ -175,7 +175,7 @@
 .project-button:hover {
   background-color: rgba(119, 119, 119, 0.103);
 }
-.project-button:hover > * {
+.project-button > * {
   color: var(--primary-color);
 }
 @media (max-width: 720px) {
@@ -204,6 +204,12 @@
     font-weight: 900;
     outline: transparent;
     border: 0;
+  }
+  .project-button > * {
+    color: white;
+  }
+  .project-button:hover > * {
+    color: var(--primary-color);
   }
   .project-card__container {
     max-width: 10rem;
