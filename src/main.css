@@ -732,6 +732,9 @@ button {
 .text-left {
   text-align: left;
 }
+.w-15 {
+  width: 15rem;
+}
 .w-full {
   width: 100%;
 }
