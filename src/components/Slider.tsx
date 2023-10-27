@@ -3,6 +3,8 @@ import { SliderProperties } from "../pages";
 import { useContext, useState, useEffect } from "react";
 import { SliderCard } from "./SliderCard";
 
+import { IoCaretBack, IoCaretForward } from "react-icons/io5";
+
 export interface Card {
   title: string;
   img: any;
@@ -48,12 +50,12 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
 
   return (
     <div className="h-screen w-full relative flex items-center">
-      <div className="absolute h-full w-full flex justify-btw items-center">
-        <button onClick={goPrevItem} className="px-5">
-          {"<"}
+      <div className="absolute h-full w-full flex justify-btw items-center events-none">
+        <button onClick={goPrevItem} className="project-button events-all">
+          <IoCaretBack size={"1.5rem"} color={"var(--primary-color)"} />
         </button>
-        <button onClick={goNextItem} className="px-5">
-          {">"}
+        <button onClick={goNextItem} className="project-button events-all">
+          <IoCaretForward size={"1.5rem"} color={"var(--primary-color)"} />
         </button>
       </div>
       <div className="flex w-full gap-5 items-center justify-center">
@@ -63,9 +65,7 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
             return (
               <SliderCard
                 key={index}
-                title={slide.name}
-                img={slide.banner}
-                description={slide.overview}
+                slide={slide}
               />
             );
           })}

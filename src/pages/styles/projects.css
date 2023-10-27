@@ -164,6 +164,17 @@
   background-color: rgba(0, 0, 0, 0.219);
   height: var(--complete-height);
 }
+.project-button {
+  height: 60%;
+  width: 5rem;
+  align-self: center;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  border: thin solid rgba(0, 0, 0, 0.178);
+}
+.project-button:hover {
+  background-color: rgba(119, 119, 119, 0.103);
+}
 @media (max-width: 720px) {
   .container__list {
     width: 100%;
@@ -180,5 +191,19 @@
   }
   .project-main__container > * {
     width: 100%;
+  }
+  .project-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 900;
+    outline: transparent;
+    border: 0;
+  }
+  .project-card__container {
+    max-width: 10rem;
+    min-width: 18rem;
   }
 }

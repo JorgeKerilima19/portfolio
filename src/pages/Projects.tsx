@@ -46,7 +46,6 @@ export const Projects = () => {
       <Slider array={breakpoints.array} sizes={breakpoints.sizes} />
       <div className="projects-container">
         {data.map((project, index) => (
-          // <ProjectModal project={project} key={index} />
           <ProjectCard key={index} project={project} />
         ))}
       </div>

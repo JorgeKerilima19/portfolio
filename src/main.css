@@ -678,6 +678,12 @@ button {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.events-all {
+  pointer-events: all;
+}
+.events-none {
+  pointer-events: none;
+}
 .overflow-hidden {
   overflow: hidden;
 }
