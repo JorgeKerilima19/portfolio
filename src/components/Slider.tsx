@@ -51,23 +51,24 @@ export const Slider = ({ sizes, array }: SliderProperties) => {
   return (
     <div className="h-screen w-full relative flex items-center">
       <div className="absolute h-full w-full flex justify-btw items-center events-none">
-        <button onClick={goPrevItem} className="project-button events-all">
-          <IoCaretBack size={"1.5rem"} color={"var(--primary-color)"} />
+        <button
+          onClick={goPrevItem}
+          className="project-button events-all grid place-items-center"
+        >
+          <IoCaretBack size={"1.5rem"} />
         </button>
-        <button onClick={goNextItem} className="project-button events-all">
-          <IoCaretForward size={"1.5rem"} color={"var(--primary-color)"} />
+        <button
+          onClick={goNextItem}
+          className="project-button events-all grid place-items-center"
+        >
+          <IoCaretForward size={"1.5rem"} />
         </button>
       </div>
       <div className="flex w-full gap-5 items-center justify-center">
         {array
           .slice(currentItem, currentItem + sizeLimit)
           .map((slide, index) => {
-            return (
-              <SliderCard
-                key={index}
-                slide={slide}
-              />
-            );
+            return <SliderCard key={index} slide={slide} />;
           })}
       </div>
     </div>

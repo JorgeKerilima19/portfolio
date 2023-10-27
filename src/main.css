@@ -760,7 +760,7 @@ button {
   width: 20%;
 }
 .w-min-15 {
-  max-width: 20rem;
+  min-width: 15 rem;
 }
 .w-min-20 {
   min-width: 20rem;
