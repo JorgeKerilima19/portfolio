@@ -17,7 +17,7 @@ export interface Project {
   lesson?: string;
   usage?: string;
   installation?: string;
-  status?: boolean;
+  status?: "In progress" | "Constantly updating" | "Finished";
 }
 
 export const projectList: Project[] = [
@@ -59,6 +59,7 @@ export const projectList: Project[] = [
     screenShoots: [SocialUnknown1],
     tools: ["Html5", "Css3", "JavaScript"],
     extraResources: ["freepik", "GithubPages", "Lorem Picsum"],
+    status: "Finished",
   },
   {
     id: 2,
@@ -135,6 +136,7 @@ export const projectList: Project[] = [
     screenShoots: [],
     tools: ["Html5", "Css3", "JavaScript"],
     extraResources: ["SVGRepo", "GithubPages"],
+    status: "In progress",
   },
   {
     id: 3,

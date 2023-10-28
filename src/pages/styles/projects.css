@@ -161,7 +161,7 @@
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.219);
+  background-color: hsla(0, 0%, 0%, 0.219);
   height: var(--complete-height);
 }
 .project-button {
@@ -170,13 +170,27 @@
   align-self: center;
   background-color: transparent;
   transition: background-color 0.3s;
-  border: thin solid rgba(0, 0, 0, 0.178);
+  border: thin solid hsla(0, 0%, 0%, 0.178);
 }
 .project-button:hover {
-  background-color: rgba(119, 119, 119, 0.103);
+  background-color: hsla(0, 0%, 47%, 0.103);
 }
 .project-button > * {
   color: var(--primary-color);
+}
+.project-status__circle {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+.status-1 {
+  background-color: hsl(0, 100%, 38%);
+}
+.status-2 {
+  background-color: hsl(64, 100%, 52%);
+}
+.status-3 {
+  background-color: hsl(138, 100%, 56%);
 }
 @media (max-width: 720px) {
   .container__list {

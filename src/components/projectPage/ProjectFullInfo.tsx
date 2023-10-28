@@ -1,7 +1,26 @@
+import { useEffect, useState } from "react";
 import { Project } from "../../helpers/dataProjects";
 import { ProjectImg } from "./ProjectImg";
 
 export const ProjectFullInfo = ({ project }: { project: Project }) => {
+  const [status, setStatus] = useState<number | undefined>(0);
+
+  useEffect(() => {
+    switch (project.status) {
+      case "In progress":
+        setStatus((status) => 1);
+        break;
+      case "Constantly updating":
+        setStatus((status) => 2);
+        break;
+      case "Finished":
+        setStatus((status) => 3);
+        break;
+      default:
+        setStatus(undefined);
+    }
+  }, [project]);
+
   return (
     <div className="project-info__details-container flex-col gap-8 overflow-y-scroll pt-8 px-5">
       <img
@@ -32,8 +51,23 @@ export const ProjectFullInfo = ({ project }: { project: Project }) => {
           <ProjectImg img={img} key={index} />
         ))}
       </div>
-      <div className="flex gap-5 flex-wrap justify-center p-5">
-        <div className="grid gap-5 w-max-15">
+      <div className="flex gap-10">
+        <h4>Status</h4>
+        {status ? (
+          <div className="flex gap-2">
+            {Array.from(Array(status)).map((el) => (
+              <span
+                className={`project-status__circle status-${status}`}
+              ></span>
+            ))}
+          </div>
+        ) : (
+          "Not especified"
+        )}
+        <span>{project.status}</span>
+      </div>
+      <div className="flex gap-5 flex-wrap p-5">
+        <div className="grid gap-5 w-15">
           <h4>Usage and Installation</h4>
           <span>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
@@ -41,16 +75,8 @@ export const ProjectFullInfo = ({ project }: { project: Project }) => {
             assumenda autem nisi?
           </span>
         </div>
-        <div className="grid gap-5 w-max-15">
+        <div className="grid gap-5 w-15">
           <h4>Features?</h4>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
-            vero eaque molestiae consectetur consequuntur qui, reiciendis velit
-            assumenda autem nisi?
-          </span>
-        </div>
-        <div className="grid gap-5 w-max-15 justify-btw">
-          <h4>Status?</h4>
           <span>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
             vero eaque molestiae consectetur consequuntur qui, reiciendis velit
