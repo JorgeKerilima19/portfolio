@@ -52,10 +52,10 @@ export const ProjectFullInfo = ({ project }: { project: Project }) => {
         ))}
       </div>
       <div className="flex gap-10">
-        <h4>Status</h4>
+        <h4 className="text-header">Status</h4>
         {status ? (
           <div className="flex gap-2">
-            {Array.from(Array(status)).map((el) => (
+            {Array.from(Array(status)).map(() => (
               <span
                 className={`project-status__circle status-${status}`}
               ></span>

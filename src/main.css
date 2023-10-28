@@ -723,6 +723,9 @@ button {
 .text-subtitle {
   font-size: 1.5rem;
 }
+.text-header {
+  font-size: 1.25rem;
+}
 .text-justify {
   text-align: justify;
 }
