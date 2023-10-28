@@ -1,9 +1,32 @@
 import { Project } from "../../helpers/dataProjects";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
-export const ProjectMainInfo = ({ project }: { project: Project }) => {
+export const ProjectMainInfo = ({
+  project,
+  setColor,
+}: {
+  project: Project;
+  setColor: Dispatch<SetStateAction<string>>;
+}) => {
+  const pickColor = () => {
+    const container = document.getElementById("logo-container");
+    if (container && container.firstChild instanceof SVGElement) {
+      const color = container.firstChild.getAttribute("fill");
+      if (color !== null) {
+        setColor(color);
+      } else {
+        setColor("defaultColor");
+      }
+    }
+  };
+
+  useEffect(() => {
+    pickColor();
+  }, [project]);
+
   return (
-    <div className="project-info__main-container flex-col items-center gap-10 p-5">
-      <div>{project?.logo}</div>
+    <div className="project-info__main-container flex-col items-center gap-10 py-10 px-5">
+      <div id="logo-container">{project?.logo}</div>
       <div className="flex-col gap-3">
         <h2 className="text-center">{project?.name}</h2>
         <span className="text-justify">{project?.overview}.</span>

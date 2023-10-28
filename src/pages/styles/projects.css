@@ -129,12 +129,15 @@
 
 .project-info__main-container {
   width: min(40%, 20rem);
-  border: thin solid black;
+  background-color: hsla(0, 0%, 46%, 0.144);
 }
 .project-info__details-container {
   width: 80%;
-  border: thin solid black;
   max-height: var(--complete-height);
+}
+.project-info__details-container::-webkit-scrollbar {
+  width: 0.4rem;
+  background-color: var(--bg-color);
 }
 .project-main__container {
   align-content: start;

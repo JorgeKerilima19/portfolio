@@ -41,6 +41,7 @@ export const projectList: Project[] = [
         className="project-presentation__logo"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 55.67 78.36"
+        fill="#f60"
       >
         <path
           fill="#f60"
@@ -89,7 +90,7 @@ export const projectList: Project[] = [
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 392.404 392.404"
         className="project-presentation__logo"
-        fill="#000000"
+        fill="#56ACE0"
       >
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g

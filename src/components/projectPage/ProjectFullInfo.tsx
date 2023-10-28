@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import { Project } from "../../helpers/dataProjects";
 import { ProjectImg } from "./ProjectImg";
 
-export const ProjectFullInfo = ({ project }: { project: Project }) => {
+export const ProjectFullInfo = ({
+  project,
+  color,
+}: {
+  project: Project;
+  color: string;
+}) => {
   const [status, setStatus] = useState<number | undefined>(0);
 
   useEffect(() => {
@@ -55,8 +61,9 @@ export const ProjectFullInfo = ({ project }: { project: Project }) => {
         <h4 className="text-header">Status</h4>
         {status ? (
           <div className="flex gap-2">
-            {Array.from(Array(status)).map(() => (
+            {Array.from(Array(status)).map((el, index) => (
               <span
+                key={index}
                 className={`project-status__circle status-${status}`}
               ></span>
             ))}
