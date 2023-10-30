@@ -1,6 +1,16 @@
 import { ReactElement } from "react";
 import SocialUnknown1 from "/assets/ScreenShoots/SocialUnknown1.png";
 
+import {
+  htmlSvg,
+  cssSvg,
+  javascriptSvg,
+  reactSvg,
+  typeScriptSvg,
+} from "./svgList";
+
+type ToolLinks = { [key: string]: string };
+
 export interface Project {
   id: number;
   name: string;
@@ -12,8 +22,8 @@ export interface Project {
   screenShoots?: (typeof SocialUnknown1)[];
   link?: string;
   codeSource?: string;
-  tools?: string[];
-  extraResources?: string[];
+  tools?: ReactElement[];
+  extraResources?: ToolLinks[];
   lesson?: string;
   usage?: string;
   installation?: string;
@@ -52,14 +62,17 @@ export const projectList: Project[] = [
     banner:
       "https://img.freepik.com/free-vector/work-office-computer-man-woman-business-character-marketing-online-employee-technology-business-man-cartoon-co-working-flat-design-freelance_1150-41790.jpg?w=826&t=st=1681354430~exp=1681355030~hmac=fefa8613276b62679b7600bcbc8857c1b511587bc38beeeb8733e17c10cf222f",
     overview:
-      "This project began as a Facebook copy, but I also use it to show my progress with new technologies",
+      "A facebook copy that I created to learn the basics of HTML, CSS and Javascript",
     description:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     link: "#",
     codeSource: "#",
     screenShoots: [SocialUnknown1],
-    tools: ["Html5", "Css3", "JavaScript"],
-    extraResources: ["freepik", "GithubPages", "Lorem Picsum"],
+    tools: [htmlSvg, cssSvg, javascriptSvg],
+    extraResources: [
+      { freepik: "" },
+      { GithubPages: "https://pages.github.com/" },
+    ],
     status: "Finished",
   },
   {
@@ -135,8 +148,11 @@ export const projectList: Project[] = [
     link: "#",
     codeSource: "#",
     screenShoots: [],
-    tools: ["Html5", "Css3", "JavaScript"],
-    extraResources: ["SVGRepo", "GithubPages"],
+    tools: [htmlSvg, cssSvg],
+    extraResources: [
+      { freepik: "" },
+      { GithubPages: "https://pages.github.com/" },
+    ],
     status: "In progress",
   },
   {
@@ -159,8 +175,8 @@ export const projectList: Project[] = [
       "This was one of my first react application I came back to it to simplify the CSS code and proper use of React hooks",
     description:
       "I learn how to use the hooks and also the usage of useContext hook for large applications ",
-    tools: ["Html5", "Css3", "React Js"],
-    extraResources: ["Unsplash", "Google Images", "Wikipedia"],
+    tools: [htmlSvg, cssSvg],
+    extraResources: [{ freepik: "" }, { GithubPages: "" }],
   },
   {
     id: 6,

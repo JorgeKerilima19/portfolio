@@ -195,6 +195,18 @@
 .status-3 {
   background-color: hsl(138, 100%, 56%);
 }
+.project-page-button_link {
+  color: inherit;
+  border: 0;
+  outline: transparent;
+  height: 1.5rem;
+  text-decoration: underline;
+}
+.project-page-button_link.disabled {
+  pointer-events: none;
+  text-decoration: none;
+}
+
 @media (max-width: 720px) {
   .container__list {
     width: 100%;
