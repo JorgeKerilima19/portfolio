@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
-import SocialUnknown1 from "/assets/ScreenShoots/SocialUnknown1.png";
+
+import { SocialUnknownImages } from "./screenshoots";
 
 import {
   htmlSvg,
@@ -19,7 +20,7 @@ export interface Project {
   banner?: string;
   overview: string;
   description?: string;
-  screenShoots?: (typeof SocialUnknown1)[];
+  screenShoots?: string[];
   link?: string;
   codeSource?: string;
   tools?: ReactElement[];
@@ -66,12 +67,13 @@ export const projectList: Project[] = [
     description:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     link: "#",
-    codeSource: "#",
-    screenShoots: [SocialUnknown1],
+    codeSource: "https://github.com/JorgeKerilima19/Social-Smth",
+    screenShoots: SocialUnknownImages,
     tools: [htmlSvg, cssSvg, javascriptSvg],
     extraResources: [
       { freepik: "" },
       { GithubPages: "https://pages.github.com/" },
+      { Pexels: "https://www.pexels.com/" },
     ],
     status: "Finished",
   },
