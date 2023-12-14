@@ -1,9 +1,9 @@
-import { PropsVerification } from "../helpers/dataProjects";
+import { Project } from "../helpers/dataProjects";
 
-export const ScreenShots = ({ project }: PropsVerification) => {
+export const ScreenShots = ({ project }: { project: Project }) => {
   return (
     <div>
-      {project.projectSs?.map((img, index) => (
+      {project.screenShoots?.map((img, index) => (
         <img key={index} src={img} className="screen-shot-close" />
       ))}
     </div>

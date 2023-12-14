@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+
 import "./index.css";
+import "./main.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { Navbar } from "./components/Navbar";
@@ -11,8 +12,9 @@ import {
   HomePage,
   NotFoundPage,
   Projects,
-  Skills,
+  ProjectPage,
 } from "./pages";
+import { AppContextProvider } from "./context/AppContextProvider";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
       { path: "/portfolio/about", element: <About /> },
       { path: "/portfolio/contact", element: <Contact /> },
       { path: "/portfolio/projects", element: <Projects /> },
-      { path: "/portfolio/skills", element: <Skills /> },
+      { path: "/portfolio/projects/:id", element: <ProjectPage /> },
       { path: "*", element: <NotFoundPage /> },
     ],
   },
@@ -32,6 +34,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AppContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AppContextProvider>
   </React.StrictMode>
 );

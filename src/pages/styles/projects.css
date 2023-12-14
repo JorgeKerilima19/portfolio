@@ -94,7 +94,7 @@
   place-items: center;
 }
 .project-presentation__logo {
-  height: 80%;
+  height: 10rem;
 }
 .project-presentation__title {
   font-size: 2em;
@@ -126,8 +126,90 @@
 .icon {
   font-size: 2em;
 }
+
+.project-info__main-container {
+  width: min(40%, 20rem);
+  background-color: hsla(0, 0%, 46%, 0.144);
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.project-info__details-container {
+  width: 80%;
+  max-height: 100vh;
+}
+.project-info__details-container::-webkit-scrollbar {
+  width: 0.4rem;
+  background-color: var(--bg-color);
+}
+.project-main__container {
+  align-content: start;
+}
+.project-link__button {
+  background-color: var(--primary-color);
+  outline: transparent;
+  border: 0;
+  color: var(--text-primary-color);
+  width: 100%;
+}
+.project-img {
+  height: 20rem;
+  object-fit: cover;
+}
+.project-img__open {
+  width: min(90%, 60rem);
+}
+.project-img-container {
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: hsla(0, 0%, 0%, 0.219);
+  height: var(--complete-height);
+}
+.project-button {
+  height: 60%;
+  width: 5rem;
+  align-self: center;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  border: thin solid hsla(0, 0%, 0%, 0.178);
+}
+.project-button:hover {
+  background-color: hsla(0, 0%, 47%, 0.103);
+}
+.project-button > * {
+  color: var(--primary-color);
+}
+.project-status__circle {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+.status-1 {
+  background-color: hsl(0, 100%, 38%);
+}
+.status-2 {
+  background-color: hsl(64, 100%, 52%);
+}
+.status-3 {
+  background-color: hsl(138, 100%, 56%);
+}
+.project-page-button_link {
+  color: inherit;
+  border: 0;
+  outline: transparent;
+  height: 1.5rem;
+  text-decoration: underline;
+}
+.project-page-button_link.disabled {
+  pointer-events: none;
+  text-decoration: none;
+}
+
 @media (max-width: 720px) {
-  .container__list{
+  .container__list {
     width: 100%;
   }
   .list__header {
@@ -136,5 +218,31 @@
   }
   .card-modal__container {
     padding: 1em;
+  }
+  .project-main__container {
+    flex-direction: column;
+  }
+  .project-main__container > * {
+    width: 100%;
+  }
+  .project-button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 900;
+    outline: transparent;
+    border: 0;
+  }
+  .project-button > * {
+    color: white;
+  }
+  .project-button:hover > * {
+    color: var(--primary-color);
+  }
+  .project-card__container {
+    max-width: 10rem;
+    min-width: 18rem;
   }
 }
