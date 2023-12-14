@@ -46,11 +46,15 @@ export const ProjectFullInfo = ({
       </div>
       <div className="grid gap-5">
         <h4>What did I learn?</h4>
-        <span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
-          vero eaque molestiae consectetur consequuntur qui, reiciendis velit
-          assumenda autem nisi?
-        </span>
+        {project.lesson ? (
+          project.lesson
+        ) : (
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+            vero eaque molestiae consectetur consequuntur qui, reiciendis velit
+            assumenda autem nisi?
+          </span>
+        )}
       </div>
       <div className="h-max-20 h-min-20 w-full flex overflow-auto overflow-y-hidden gap-4">
         {project.screenShoots?.map((img, index) => (

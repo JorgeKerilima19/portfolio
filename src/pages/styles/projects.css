@@ -130,10 +130,12 @@
 .project-info__main-container {
   width: min(40%, 20rem);
   background-color: hsla(0, 0%, 46%, 0.144);
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .project-info__details-container {
   width: 80%;
-  max-height: var(--complete-height);
+  max-height: 100vh;
 }
 .project-info__details-container::-webkit-scrollbar {
   width: 0.4rem;

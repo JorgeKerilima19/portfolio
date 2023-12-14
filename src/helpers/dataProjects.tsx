@@ -67,10 +67,13 @@ export const projectList: Project[] = [
     description:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     link: "#",
+    lesson:
+      "Building this project, I increase my knowledge of javascript components and using arguments to change its behavior regarding css styles. ",
     codeSource: "https://github.com/JorgeKerilima19/Social-Smth",
     screenShoots: SocialUnknownImages,
     tools: [htmlSvg, cssSvg, javascriptSvg],
     extraResources: [
+      { JSONPlaceholder: "https://jsonplaceholder.typicode.com/" },
       { freepik: "" },
       { GithubPages: "https://pages.github.com/" },
       { Pexels: "https://www.pexels.com/" },
