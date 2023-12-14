@@ -1,7 +1,7 @@
 import "./styles/projects.css";
 
 import { projectList as data } from "../helpers/dataProjects";
-import { ProjectCard, ProjectModal } from "../components";
+import { ProjectCard } from "../components";
 import { Slider } from "../components/Slider";
 
 export interface SliderProperties {
