@@ -8,6 +8,7 @@ import {
   javascriptSvg,
   reactSvg,
   typeScriptSvg,
+  tailWindSvg,
 } from "./svgList";
 
 type ToolLinks = { [key: string]: string };
@@ -129,31 +130,51 @@ export const projectList: Project[] = [
   },
   {
     id: 3,
-    name: "Html, Css + Javascript Vanilla Portfolio",
-    image: <svg className="project-card__img"></svg>,
-    overview: "This is a fb Copy",
-  },
-  {
-    id: 4,
-    name: "React task manager",
-    image: <svg className="project-card__img"></svg>,
-    overview: "This is a fb Copy",
-  },
-  {
-    id: 5,
-    name: "Social Travel",
-    image: <svg className="project-card__img"></svg>,
-    overview:
-      "This was one of my first react application I came back to it to simplify the CSS code and proper use of React hooks",
-    description:
-      "I learn how to use the hooks and also the usage of useContext hook for large applications ",
-    tools: [htmlSvg, cssSvg],
-    extraResources: [{ freepik: "" }, { GithubPages: "" }],
-  },
-  {
-    id: 6,
-    name: "React Pokedex",
-    image: <svg className="project-card__img"></svg>,
-    overview: "This is a fb Copy",
+    name: "Techworld Page",
+    image: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+        className="project-card__svg"
+        fill="#be123c"
+      >
+        <path d="M10.05 18a20.46 20.46 0 00.62 4.93h6.48v-9.48h-6.57a20.55 20.55 0 00-.53 4.55z" />
+        <path
+          d="M18.85 13.45v9.48h6.48A20.46 20.46 0 0026 18a20.55 20.55 0 00-.52-4.55z"
+          fill="red"
+        />
+
+        <path d="M18 2a16 16 0 1016 16A16 16 0 0018 2zm12.22 22.71H26.6a21.8 21.8 0 01-3 6 13.86 13.86 0 01-3 .92 20.21 20.21 0 004.18-6.94h-5.92v7.15h-1.69v-7.13h-5.95a20.21 20.21 0 004.18 6.95 13.86 13.86 0 01-2.94-.9 21.8 21.8 0 01-3-6.05H5.78a13.94 13.94 0 01-.83-1.81h4a22.2 22.2 0 01-.58-4.9 21.88 21.88 0 01.48-4.55H4.76a13.88 13.88 0 01.76-1.81h3.81A22.26 22.26 0 0112.61 5a13.86 13.86 0 012.87-.84 20.13 20.13 0 00-4.4 7.45h6.09V4h1.69v7.64h6.09a20.13 20.13 0 00-4.39-7.44 13.89 13.89 0 012.87.8 22.26 22.26 0 013.27 6.59h3.77a13.89 13.89 0 01.76 1.81h-4.06a21.88 21.88 0 01.49 4.6 22.2 22.2 0 01-.57 4.93h4a13.94 13.94 0 01-.87 1.78z" />
+      </svg>
+    ),
+    logo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+        className="project-presentation__logo"
+        fill="#be123c"
+      >
+        <path d="M10.05 18a20.46 20.46 0 00.62 4.93h6.48v-9.48h-6.57a20.55 20.55 0 00-.53 4.55z" />
+        <path d="M18.85 13.45v9.48h6.48A20.46 20.46 0 0026 18a20.55 20.55 0 00-.52-4.55z" />
+        <path d="M18 2a16 16 0 1016 16A16 16 0 0018 2zm12.22 22.71H26.6a21.8 21.8 0 01-3 6 13.86 13.86 0 01-3 .92 20.21 20.21 0 004.18-6.94h-5.92v7.15h-1.69v-7.13h-5.95a20.21 20.21 0 004.18 6.95 13.86 13.86 0 01-2.94-.9 21.8 21.8 0 01-3-6.05H5.78a13.94 13.94 0 01-.83-1.81h4a22.2 22.2 0 01-.58-4.9 21.88 21.88 0 01.48-4.55H4.76a13.88 13.88 0 01.76-1.81h3.81A22.26 22.26 0 0112.61 5a13.86 13.86 0 012.87-.84 20.13 20.13 0 00-4.4 7.45h6.09V4h1.69v7.64h6.09a20.13 20.13 0 00-4.39-7.44 13.89 13.89 0 012.87.8 22.26 22.26 0 013.27 6.59h3.77a13.89 13.89 0 01.76 1.81h-4.06a21.88 21.88 0 01.49 4.6 22.2 22.2 0 01-.57 4.93h4a13.94 13.94 0 01-.87 1.78z" />
+      </svg>
+    ),
+    // banner?: string;
+    overview: "A website inpired by fireart.io",
+    // description?: string;
+    // screenShoots?: string[];
+    // link?: string;
+    // codeSource?: string;
+    tools: [reactSvg, typeScriptSvg, tailWindSvg, cssSvg],
+    extraResources: [
+      { Fireart: "https://fireart.studio/" },
+      { Svgrepo: "https://www.svgrepo.com/" },
+      { GithubPages: "https://pages.github.com/" },
+      { Pixabay: "https://pixabay.com/" },
+    ],
+    // lesson?: string;
+    // usage?: string;
+    // installation?: string;
+    // status?: "In progress" | "Constantly updating" | "Finished";
   },
 ];
