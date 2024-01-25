@@ -26,9 +26,10 @@ export interface Project {
   codeSource?: string;
   tools?: ReactElement[];
   extraResources?: ToolLinks[];
+  reason?: string;
   lesson?: string;
-  usage?: string;
   installation?: string;
+  features?: string[];
   status?: "In progress" | "Constantly updating" | "Finished";
 }
 
@@ -68,6 +69,8 @@ export const projectList: Project[] = [
     description:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
     link: "#",
+    reason:
+      "I want to build this project because I believe that I can clone mostly any relevant functionality that Facebook has, such as saving or deleting data/post fetch comentaries, open chats and open modal for images/videos",
     lesson:
       "Building this project, I increase my knowledge of javascript components and using arguments to change its behavior regarding css styles. ",
     codeSource: "https://github.com/JorgeKerilima19/Social-Smth",
@@ -80,6 +83,15 @@ export const projectList: Project[] = [
       { Pexels: "https://www.pexels.com/" },
     ],
     status: "Finished",
+    installation:
+      "You can direclty clone the repository and open it with your code editor or visit the site hosted on github",
+    features: [
+      "Dark mode",
+      "Fetching Post/comments",
+      "Saving Post",
+      "Open Modals",
+      "View friend's profile",
+    ],
   },
   {
     id: 2,

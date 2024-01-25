@@ -29,11 +29,11 @@ export const ProjectMainInfo = ({
     <div className="project-info__main-container flex-col items-center gap-10 py-10 px-5">
       <div id="logo-container">{project?.logo}</div>
       <div className="flex-col gap-3">
-        <h2 className="text-center">{project?.name}</h2>
+        <h2 className="text-center text-600">{project?.name}</h2>
         <span className="text-justify">{project?.overview}.</span>
-        <div className="flex gap-8 flex-wrap">
-          <div className="grid gap-2">
-            <h3>Tools used</h3>
+        <div className="flex gap-6 flex-wrap">
+          <div className="grid gap-5">
+            <h3 className="text-500">Tools used</h3>
             <div className="flex flex-wrap gap-3">
               {project?.tools?.map((tool, index) => (
                 <React.Fragment key={index}>{tool}</React.Fragment>
@@ -41,7 +41,7 @@ export const ProjectMainInfo = ({
             </div>
           </div>
           <ul className="grid gap-2 list-dot">
-            <h3>Extra resources</h3>
+            <h3 className="text-500">Extra resources</h3>
             {project.extraResources?.map((project, index) => (
               <React.Fragment key={index}>
                 {Object.entries(project).map(([key, value], index) => (

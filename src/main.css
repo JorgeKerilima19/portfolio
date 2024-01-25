@@ -750,6 +750,15 @@ button {
 .text-600 {
   font-weight: 600;
 }
+.text-700 {
+  font-weight: 600;
+}
+.text-sm {
+  font-size: 1.07rem;
+}
+.text-md {
+  font-size: 1.15rem;
+}
 .w-15 {
   width: 15rem;
 }
