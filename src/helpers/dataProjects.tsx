@@ -114,9 +114,9 @@ export const projectList: Project[] = [
     banner:
       "https://img.freepik.com/free-vector/connecting-teams-concept-landing-page_52683-27129.jpg?w=740&t=st=1681355165~exp=1681355765~hmac=18db220a6a3dd4fed01411b1a1370a6bf2923a8256637d467eff85683e26c33f",
     overview:
-      "With this project I learn how to properly use JavaScript to have a correct user interaction",
+      "With this project I learn how to properly use JavaScript event listeners, states management and routing with hash",
     description:
-      "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped to practice more responsive design",
+      "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped me to practice more responsive design",
     link: "#",
     codeSource: "#",
     screenShoots: gameImages,
@@ -130,7 +130,7 @@ export const projectList: Project[] = [
   },
   {
     id: 3,
-    name: "Techworld Page",
+    name: "Techworld",
     image: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -159,12 +159,14 @@ export const projectList: Project[] = [
         <path d="M18 2a16 16 0 1016 16A16 16 0 0018 2zm12.22 22.71H26.6a21.8 21.8 0 01-3 6 13.86 13.86 0 01-3 .92 20.21 20.21 0 004.18-6.94h-5.92v7.15h-1.69v-7.13h-5.95a20.21 20.21 0 004.18 6.95 13.86 13.86 0 01-2.94-.9 21.8 21.8 0 01-3-6.05H5.78a13.94 13.94 0 01-.83-1.81h4a22.2 22.2 0 01-.58-4.9 21.88 21.88 0 01.48-4.55H4.76a13.88 13.88 0 01.76-1.81h3.81A22.26 22.26 0 0112.61 5a13.86 13.86 0 012.87-.84 20.13 20.13 0 00-4.4 7.45h6.09V4h1.69v7.64h6.09a20.13 20.13 0 00-4.39-7.44 13.89 13.89 0 012.87.8 22.26 22.26 0 013.27 6.59h3.77a13.89 13.89 0 01.76 1.81h-4.06a21.88 21.88 0 01.49 4.6 22.2 22.2 0 01-.57 4.93h4a13.94 13.94 0 01-.87 1.78z" />
       </svg>
     ),
-    // banner?: string;
-    overview: "A website inpired by fireart.io",
-    // description?: string;
-    // screenShoots?: string[];
-    // link?: string;
-    // codeSource?: string;
+    banner:
+      "https://img.freepik.com/free-vector/programming-languages-learning-software-coding-courses-website-development-class-script-writing-it-programmers-cartoon-characters_335657-3454.jpg?w=740&t=st=1705165157~exp=1705165757~hmac=f309ca69e9b0be2c7b34f224248c756f67bcdeb5edf5a83a9ad5c274bc01e40f",
+    overview: "A website for a design company inspired by fireart Studio",
+    description:
+      "With this project I reenforced my react basic knowledge and I have also learned in more deth tailwind and its applications for responsive design and more",
+    // screenShoots: string[],
+    // link: string,
+    // codeSource: string,
     tools: [reactSvg, typeScriptSvg, tailWindSvg, cssSvg],
     extraResources: [
       { Fireart: "https://fireart.studio/" },
@@ -172,9 +174,9 @@ export const projectList: Project[] = [
       { GithubPages: "https://pages.github.com/" },
       { Pixabay: "https://pixabay.com/" },
     ],
-    // lesson?: string;
-    // usage?: string;
-    // installation?: string;
-    // status?: "In progress" | "Constantly updating" | "Finished";
+    // lesson: string,
+    // usage: string,
+    // installation?: string,
+    status: "Finished",
   },
 ];

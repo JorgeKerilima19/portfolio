@@ -735,6 +735,21 @@ button {
 .text-left {
   text-align: left;
 }
+.text-300 {
+  font-weight: 300;
+}
+.text-normal {
+  font-weight: normal;
+}
+.text-400 {
+  font-weight: 400;
+}
+.text-500 {
+  font-weight: 500;
+}
+.text-600 {
+  font-weight: 600;
+}
 .w-15 {
   width: 15rem;
 }
