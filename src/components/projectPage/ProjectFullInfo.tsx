@@ -95,7 +95,7 @@ export const ProjectFullInfo = ({
               <h4 className="text-500 text-md">Features</h4>
               <ul className="list-dot list-inside pl-8">
                 {project.features.map((feature) => (
-                  <li>{feature}</li>
+                  <li key={feature}>{feature}</li>
                 ))}
               </ul>
             </div>
