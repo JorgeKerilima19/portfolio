@@ -6,7 +6,7 @@ import profile from "/assets/1.png";
 import "./styles/about.css";
 
 export const About = () => {
-  const [showCV, setShowCV] = useState(false);
+  const [showCV, setShowCV] = useState(true);
 
   const showComponentCV = () => {
     setShowCV(!showCV);
