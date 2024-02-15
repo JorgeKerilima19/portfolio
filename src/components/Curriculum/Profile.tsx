@@ -105,7 +105,7 @@ export const Profile = () => {
       <header>Jorge Quispe Chilo</header>
       <div className="flex flex-wrap gap-2">
         {items.map((item) => (
-          <div className="flex gap-1">
+          <div className="flex gap-1 items-center">
             {item.svg}
             <span className="flex items-center">{item.value}</span>
           </div>
