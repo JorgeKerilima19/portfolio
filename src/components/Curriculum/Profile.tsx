@@ -101,11 +101,11 @@ const items: ProfileValue[] = [
 
 export const Profile = () => {
   return (
-    <article>
-      <header>Jorge Quispe Chilo</header>
-      <div className="flex flex-wrap gap-2">
+    <article className="cv-profile">
+      <header className="text-title">Jorge Quispe Chilo</header>
+      <div className="flex flex-wrap gap-2 py-8">
         {items.map((item) => (
-          <div className="flex gap-1 items-center">
+          <div key={item.name} className="flex gap-1 items-center">
             {item.svg}
             <span className="flex items-center">{item.value}</span>
           </div>

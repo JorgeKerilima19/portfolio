@@ -5,3 +5,11 @@
   width: 1rem;
   height: 1rem;
 }
+.cv-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+.cv-profile {
+  grid-column: span 2;
+}

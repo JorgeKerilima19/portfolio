@@ -10,12 +10,12 @@ import {
 
 export const Cv = () => {
   return (
-    <div className="full-height">
+    <div className="full-height cv-container">
       <Profile />
       <Perfil />
-      <Skills />
-      <Experience />
       <Education />
+      <Experience />
+      <Skills />
       <Strengths />
     </div>
   );
