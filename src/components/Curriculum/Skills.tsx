@@ -31,22 +31,22 @@ export const Skills = () => {
   return (
     <div className="grid gap-2">
       <h3>Skills</h3>
-      <div>
-        <h4>Technical Skills</h4>
-        <div className="flex flex-wrap">
+      <div className="grid gap-1 pl-4">
+        <h4 className="text-500">Technical Skills</h4>
+        <ul className="flex flex-wrap items-center list-dot">
           {skills.map((skill) => (
-            <div key={skill.id} className="flex items-center mr-5">
-              <span className="mr-4">{skill.name}</span>
+            <li key={skill.id} className="flex gap-1 mr-4 items-center">
+              <span>{skill.name}</span>
               {skill.icon}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-      <div>
-        <h4>Languages</h4>
+      <div className="grid gap-1 pl-4 items-start justify-start">
+        <h4 className="text-500">Languages</h4>
         <ul>
           {Object.entries(languages).map(([lang, level]) => (
-            <li key={lang}>
+            <li key={lang} className="w-full flex justify-btw gap-5">
               <span>{lang}</span>
               <span>{level}</span>
             </li>

@@ -1,8 +1,9 @@
 export const Experience = () => {
   return (
-    <div>
-      <h4>Front-end developer freelancer</h4>
-      <ul>
+    <div className="grid gap-2">
+      <h3 className="text-400">Experience</h3>
+      <h4 className="text-500">Front-end developer freelancer</h4>
+      <ul className="list-dot list-inside pl-5">
         <li>
           Developed and implemented responsive and user-friendly web interfaces
           using HTML, CSS, and JavaScript, resulting in improved website

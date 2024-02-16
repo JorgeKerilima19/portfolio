@@ -6,14 +6,14 @@ import profile from "/assets/1.png";
 import "./styles/about.css";
 
 export const About = () => {
-  const [showCV, setShowCV] = useState(true);
+  const [showCV, setShowCV] = useState(false);
 
   const showComponentCV = () => {
     setShowCV(!showCV);
   };
 
   return (
-    <section className="section__about">
+    <section className="section__about pb-10">
       <div className="container gap-2">
         <h3>About me</h3>
         <div className="container-row">
@@ -36,7 +36,7 @@ export const About = () => {
         </div>
       </div>
       <div>
-        <button onClick={showComponentCV}>Show CV</button>
+        <button onClick={showComponentCV} className="about-cv__button">Show CV</button>
       </div>
       <>{showCV ? <Cv /> : ""}</>
     </section>

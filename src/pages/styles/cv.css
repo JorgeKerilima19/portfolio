@@ -9,7 +9,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
+  row-gap: 1rem;
 }
 .cv-profile {
   grid-column: span 2;
+}
+.cv-strengths {
+  padding: 0.38rem;
+  background-color: var(--primary-color);
+  color: var(--text-primary-color);
+}
+
+@media (max-width: 720px) {
+  .cv-container {
+    grid-template-columns: repeat(1, auto);
+  }
+  .cv-profile {
+    grid-column: span 1;
+  }
 }
