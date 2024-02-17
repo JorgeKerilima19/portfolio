@@ -1,6 +1,6 @@
 export const Experience = () => {
   return (
-    <div className="grid gap-2">
+    <div className="flex-col gap-2">
       <h3 className="text-400">Experience</h3>
       <h4 className="text-500">Front-end developer freelancer</h4>
       <ul className="list-dot list-inside pl-5">

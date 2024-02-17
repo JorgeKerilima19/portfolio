@@ -8,7 +8,7 @@ const strengths = [
 
 export const Strengths = () => {
   return (
-    <div className="grid gap-2">
+    <div className="flex-col gap-2">
       <h3 className="text-400">Strengths</h3>
       <div className="flex gap-2 flex-wrap">
         {strengths.map((skill) => (

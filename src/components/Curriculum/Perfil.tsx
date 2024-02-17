@@ -1,6 +1,6 @@
 export const Perfil = () => {
   return (
-    <div className="grid gap-2">
+    <div className="flex-col gap-2">
       <h3 className="text-400">Profile</h3>
       <p className="pl-4">
         Skilled Front End Developer with 1 year of experience in creating

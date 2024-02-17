@@ -10,7 +10,7 @@ import {
 
 export const Cv = () => {
   return (
-    <div className="full-height cv-container">
+    <div className="cv-container">
       <Profile />
       <Perfil />
       <Education />

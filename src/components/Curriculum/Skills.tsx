@@ -29,7 +29,7 @@ const languages = {
 
 export const Skills = () => {
   return (
-    <div className="grid gap-2">
+    <div className="flex-col gap-2">
       <h3>Skills</h3>
       <div className="grid gap-1 pl-4">
         <h4 className="text-500">Technical Skills</h4>

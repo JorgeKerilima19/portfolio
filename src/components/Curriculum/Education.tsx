@@ -1,6 +1,6 @@
 export const Education = () => {
   return (
-    <div className="grid gap-2">
+    <div className="flex-col gap-2">
       <h3 className="text-400">Education</h3>
       <div className="pl-4">
         <h4 className="text-500">University of the People</h4>

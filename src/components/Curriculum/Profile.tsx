@@ -1,4 +1,7 @@
-import { ReactElement } from "react";
+import { ReactElement, useContext } from "react";
+
+import cvImage from "/assets/cvPhoto.png";
+import AppContext from "../../context/Appcontext";
 
 interface ProfileValue {
   name: string;
@@ -50,14 +53,10 @@ const items: ProfileValue[] = [
     svg: (
       <svg
         className="cv__icon"
-        fill="none"
-        viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
       >
-        <g stroke="#000" strokeLinecap="round" strokeWidth="2">
-          <path d="M4 7l6.2 4.65a3 3 0 003.6 0L20 7" />
-          <rect height="14" width="18" rx="2" x="3" y="5" />
-        </g>
+        <path d="M32 6v20c0 1.135-.865 2-2 2h-2V9.849l-12 8.62-12-8.62V28H2c-1.135 0-2-.865-2-2V6c0-.568.214-1.068.573-1.422A1.973 1.973 0 012 4h.667L16 13.667 29.333 4H30c.568 0 1.068.214 1.427.578.359.354.573.854.573 1.422z" />
       </svg>
     ),
     value: "quispechilojorge@gmail.com",
@@ -100,18 +99,52 @@ const items: ProfileValue[] = [
 ];
 
 export const Profile = () => {
+  const { windowSize } = useContext(AppContext);
+
+  const directMessage = () => {
+    const emailAddress = "quispechilojorge@gmail.com";
+
+    const mailtoLink = `mailto:${emailAddress}`;
+
+    window.open(mailtoLink, "_blank");
+  };
+
   return (
-    <article className="cv-profile">
-      <header className="text-title">Jorge Quispe Chilo</header>
-      <div className="flex flex-wrap gap-2 py-8">
-        {items.map((item) => (
-          <div key={item.name} className="flex gap-1 items-center">
-            {item.svg}
-            <span className="flex items-center">{item.value}</span>
-          </div>
-        ))}
+    <article className="cv-profile flex justify-btw items-center p-4">
+      <div>
+        <header
+          className={`text-title ${
+            windowSize > 720 ? "text-left" : "text-center"
+          } `}
+        >
+          Jorge Quispe Chilo
+        </header>
+        <div className="flex flex-wrap gap-3 py-4 cv-profile__items">
+          {items.map((item) => {
+            if (item.name === "Email") {
+              return (
+                <a
+                  key={item.name}
+                  className="flex gap-1 items-center"
+                  onClick={directMessage}
+                  style={{ textDecoration: "underline" }}
+                >
+                  {item.svg}
+                  <span className="flex items-center">{item.value}</span>
+                </a>
+              );
+            }
+
+            return (
+              <div key={item.name} className="flex gap-1 items-center">
+                {item.svg}
+                <span className="flex items-center">{item.value}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <img src="" alt="imageProfile" />
+      <img src={cvImage} alt="imageProfile" className="cv-profile__img" />
     </article>
   );
 };
