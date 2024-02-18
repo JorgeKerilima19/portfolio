@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { SocialUnknownImages, gameImages } from "./screenshoots";
+import { SocialUnknownImages, gameImages, techSshots } from "./screenshoots";
 
 import {
   htmlSvg,
@@ -65,10 +65,10 @@ export const projectList: Project[] = [
     banner:
       "https://img.freepik.com/free-vector/work-office-computer-man-woman-business-character-marketing-online-employee-technology-business-man-cartoon-co-working-flat-design-freelance_1150-41790.jpg?w=826&t=st=1681354430~exp=1681355030~hmac=fefa8613276b62679b7600bcbc8857c1b511587bc38beeeb8733e17c10cf222f",
     overview:
-      "A facebook copy that I created to learn the basics of HTML, CSS and Javascript",
+      "A facebook copy that I created to learn the basics of HTML, CSS and Javascript. Along the way I incorporate new stuff I learn",
     description:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
-    link: "#",
+    link: "https://jorgekerilima19.github.io/Social-Smth/",
     reason:
       "I want to build this project because I believe that I can clone mostly any relevant functionality that Facebook has, such as saving or deleting data/post fetch comentaries, open chats and open modal for images/videos",
     lesson:
@@ -126,11 +126,24 @@ export const projectList: Project[] = [
     banner:
       "https://img.freepik.com/free-vector/connecting-teams-concept-landing-page_52683-27129.jpg?w=740&t=st=1681355165~exp=1681355765~hmac=18db220a6a3dd4fed01411b1a1370a6bf2923a8256637d467eff85683e26c33f",
     overview:
-      "With this project I learn how to properly use JavaScript event listeners, states management and routing with hash",
+      "This project was design and inspired by my curiosity of developing web games and its responsiveness to mobile devices",
     description:
       "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped me to practice more responsive design",
-    link: "#",
-    codeSource: "#",
+    lesson:
+      "With this project I learn how to properly use JavaScript event listeners, states management and routing with hash",
+    reason:
+      "I was curious about making web games and how they can be develop using functions and objects to control media, etc",
+    features: [
+      "Sound/music",
+      "Responsiveness",
+      "Records per level",
+      "7 levels",
+      "No time limit",
+    ],
+    installation:
+      "You can clone the site via Github or visit the site directly",
+    link: "https://jorgekerilima19.github.io/JsVanilla-game/",
+    codeSource: "https://github.com/JorgeKerilima19/JsVanilla-game",
     screenShoots: gameImages,
     tools: [htmlSvg, cssSvg, javascriptSvg],
     extraResources: [
@@ -175,10 +188,10 @@ export const projectList: Project[] = [
       "https://img.freepik.com/free-vector/programming-languages-learning-software-coding-courses-website-development-class-script-writing-it-programmers-cartoon-characters_335657-3454.jpg?w=740&t=st=1705165157~exp=1705165757~hmac=f309ca69e9b0be2c7b34f224248c756f67bcdeb5edf5a83a9ad5c274bc01e40f",
     overview: "A website for a design company inspired by fireart Studio",
     description:
-      "With this project I reenforced my react basic knowledge and I have also learned in more deth tailwind and its applications for responsive design and more",
-    // screenShoots: string[],
-    // link: string,
-    // codeSource: string,
+      "With this project I reenforced my react basic knowledge and I have also learned in more depth tailwind and its applications for responsive design and more",
+    screenShoots: techSshots,
+    link: "",
+    codeSource: "https://github.com/JorgeKerilima19/TWorld",
     tools: [reactSvg, typeScriptSvg, tailWindSvg, cssSvg],
     extraResources: [
       { Fireart: "https://fireart.studio/" },
@@ -186,9 +199,13 @@ export const projectList: Project[] = [
       { GithubPages: "https://pages.github.com/" },
       { Pixabay: "https://pixabay.com/" },
     ],
-    // lesson: string,
-    // usage: string,
-    // installation?: string,
+    lesson:
+      "Building this project helped me a lot understanding the correct usage of tailwind and solidifying my knowledge of react and typescript",
+    installation:
+      "Clone the repository and install the dependencies using npm or yarn. Then just start the server. Or alternatively, you can visit the site hosted on GithubPages",
     status: "Finished",
+    reason:
+      "I liked how the web of Firestudio look and I thought to myself, I think I can do this.",
+    features: ["Responsive", "Blog Page", "Components reuse"],
   },
 ];

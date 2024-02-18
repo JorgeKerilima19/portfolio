@@ -62,9 +62,15 @@ export const ProjectMainInfo = ({
           </ul>
         </div>
         <div className="flex justify-evenly gap-2">
-          <button className="project-link__button py-2">Visit site</button>
           <button className="project-link__button py-2">
-            <a href={project.codeSource}>Code source</a>
+            <a href={project.link} target="_blank">
+              Visit Site
+            </a>
+          </button>
+          <button className="project-link__button py-2">
+            <a href={project.codeSource} target="_blank">
+              Code source
+            </a>
           </button>
         </div>
       </div>
