@@ -190,7 +190,7 @@ export const projectList: Project[] = [
     description:
       "With this project I reenforced my react basic knowledge and I have also learned in more depth tailwind and its applications for responsive design and more",
     screenShoots: techSshots,
-    link: "",
+    link: "https://jorgekerilima19.github.io/TWorld/npm",
     codeSource: "https://github.com/JorgeKerilima19/TWorld",
     tools: [reactSvg, typeScriptSvg, tailWindSvg, cssSvg],
     extraResources: [
