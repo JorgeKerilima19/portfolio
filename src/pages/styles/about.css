@@ -10,3 +10,11 @@
   justify-content: space-around;
   width: min(100%, max(60%, 30rem));
 }
+.about-cv__button {
+  background-color: var(--primary-color);
+  color: var(--text-primary-color);
+  outline: transparent;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}

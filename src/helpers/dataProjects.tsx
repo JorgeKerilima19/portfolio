@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { SocialUnknownImages } from "./screenshoots";
+import { SocialUnknownImages, gameImages, techSshots } from "./screenshoots";
 
 import {
   htmlSvg,
@@ -8,6 +8,7 @@ import {
   javascriptSvg,
   reactSvg,
   typeScriptSvg,
+  tailWindSvg,
 } from "./svgList";
 
 type ToolLinks = { [key: string]: string };
@@ -25,9 +26,10 @@ export interface Project {
   codeSource?: string;
   tools?: ReactElement[];
   extraResources?: ToolLinks[];
+  reason?: string;
   lesson?: string;
-  usage?: string;
   installation?: string;
+  features?: string[];
   status?: "In progress" | "Constantly updating" | "Finished";
 }
 
@@ -63,10 +65,12 @@ export const projectList: Project[] = [
     banner:
       "https://img.freepik.com/free-vector/work-office-computer-man-woman-business-character-marketing-online-employee-technology-business-man-cartoon-co-working-flat-design-freelance_1150-41790.jpg?w=826&t=st=1681354430~exp=1681355030~hmac=fefa8613276b62679b7600bcbc8857c1b511587bc38beeeb8733e17c10cf222f",
     overview:
-      "A facebook copy that I created to learn the basics of HTML, CSS and Javascript",
+      "A facebook copy that I created to learn the basics of HTML, CSS and Javascript. Along the way I incorporate new stuff I learn",
     description:
       "This Project helped me to have a better understanding of Html5 tags and good practices; Css3 selectors; and vanilla JavaScript fetching as well as creating HTML tags within it",
-    link: "#",
+    link: "https://jorgekerilima19.github.io/Social-Smth/",
+    reason:
+      "I want to build this project because I believe that I can clone mostly any relevant functionality that Facebook has, such as saving or deleting data/post fetch comentaries, open chats and open modal for images/videos",
     lesson:
       "Building this project, I increase my knowledge of javascript components and using arguments to change its behavior regarding css styles. ",
     codeSource: "https://github.com/JorgeKerilima19/Social-Smth",
@@ -79,6 +83,15 @@ export const projectList: Project[] = [
       { Pexels: "https://www.pexels.com/" },
     ],
     status: "Finished",
+    installation:
+      "You can direclty clone the repository and open it with your code editor or visit the site hosted on github",
+    features: [
+      "Dark mode",
+      "Fetching Post/comments",
+      "Saving Post",
+      "Open Modals",
+      "View friend's profile",
+    ],
   },
   {
     id: 2,
@@ -103,90 +116,96 @@ export const projectList: Project[] = [
     ),
     logo: (
       <svg
-        version="1.1"
-        id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 392.404 392.404"
         className="project-presentation__logo"
-        fill="#56ACE0"
+        viewBox="0 0 512 512"
       >
-        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-        <g
-          id="SVGRepo_tracerCarrier"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-          {" "}
-          <path
-            fill="#FFFFFF"
-            d="M289.981,370.747V358.4c0-39.434,13.964-78.416,39.305-109.705 c23.208-28.962,31.418-51.135,30.901-87.467c0-76.8-62.513-139.313-139.313-139.313S81.561,84.428,81.561,161.228v32.388 c0,2.457-0.84,4.913-2.392,6.853l-35.103,43.507h26.57c6.012,0,10.925,4.848,10.925,10.925v32.517 c0,7.24,5.883,13.123,13.123,13.123h28.832c6.012,0,10.925,4.848,10.925,10.925v59.345h155.539V370.747z"
-          ></path>{" "}
-          <path
-            fill="#56ACE0"
-            d="M305.496,222.707c-6.012,0-10.925-4.848-10.925-10.925c0-6.012,4.848-10.925,10.925-10.925h26.246 c1.745-4.848,3.103-9.891,4.202-14.933h-49.842c-6.012,0-10.925-4.848-10.925-10.925c0-6.012,4.848-10.925,10.925-10.925h52.364 c0-1.034,0.129-2.004,0.129-3.038c0-64.84-52.687-117.527-117.527-117.527S103.541,96.194,103.541,161.034v43.96L89.9,222.125 h13.705v56.566h52.945v70.335h112.097c2.069-41.18,17.455-81.261,43.895-113.972c3.168-3.879,5.947-7.952,8.469-12.218h-15.515 V222.707z"
-          ></path>{" "}
-          <g>
-            {" "}
-            <path
-              fill="#194F82"
-              d="M226.305,62.255c-27.669-3.491-53.139,18.747-53.139,47.451c0,6.012,4.848,10.925,10.925,10.925 c6.012,0,10.925-4.848,10.925-10.925c1.228-16.679,12.218-26.958,28.962-25.794c11.636,1.293,21.463,11.055,22.82,22.82 c1.228,11.507-4.913,22.238-15.515,26.828c-12.8,5.56-21.204,18.554-21.204,33.164v21.463c0,6.012,4.848,10.925,10.925,10.925 c6.012,0,10.925-4.848,10.925-10.925v-21.463c0-5.818,3.232-11.055,7.952-13.123c19.394-8.339,30.901-28.121,28.574-49.196 C265.933,82.36,248.284,64.646,226.305,62.255z"
-            ></path>{" "}
-            <path
-              fill="#194F82"
-              d="M220.939,207.451c-6.012,0-10.925,4.848-10.925,10.925v8.727c0,6.012,4.848,10.925,10.925,10.925 c6.012,0,10.925-4.848,10.925-10.925v-8.727C231.799,212.364,226.951,207.451,220.939,207.451z"
-            ></path>{" "}
-            <path
-              fill="#194F82"
-              d="M220.939,0C132.05,0,59.775,72.275,59.775,161.099v28.509l-46.998,58.246 c-2.651,3.232-3.168,7.758-1.293,11.507c1.745,3.814,5.624,6.206,9.826,6.206h38.465v21.657c0,19.265,15.709,34.909,34.909,34.909 h18.036v59.345c0,6.012,4.848,10.925,10.925,10.925h177.261c6.012,0,10.925-4.848,10.925-10.925v-23.273 c0-34.457,12.218-68.525,34.457-96.065c23.079-28.509,35.75-64.453,35.75-101.236C382.038,72.275,309.763,0,220.939,0z M329.222,248.63c-25.341,31.354-39.305,70.335-39.305,109.77v12.347H134.442v-59.345c0-6.012-4.848-10.925-10.925-10.925H94.62 c-7.24,0-13.123-5.883-13.123-13.123v-32.517c0-6.012-4.848-10.925-10.925-10.925h-26.57l35.103-43.507 c1.552-1.939,2.392-4.331,2.392-6.853v-32.388c0-76.8,62.513-139.313,139.313-139.313s139.313,62.513,139.313,139.313 C360.769,197.43,352.494,219.669,329.222,248.63z"
-            ></path>{" "}
-          </g>{" "}
-        </g>
+        <path d="M398.325 0h-284.65c-19.23 0-34.834 15.596-34.834 34.833v442.334c0 19.237 15.604 34.832 34.833 34.832h284.651c19.229 0 34.833-15.595 34.833-34.832V34.833C433.159 15.596 417.555 0 398.325 0zM258.74 320.726c-1.055 1.012-.8.987-.8.987-.494.596-1.208.953-1.94.953h-.016c-.715 0-1.43-.357-1.924-.953 0 0 .221.025-.799-.987-29.864-28.834-73.528-46.667-73.528-85.27 0-30.068 17.732-46.549 39.138-46.122 23.228.442 34.611 16.88 37.13 31.838 2.519-14.958 13.886-31.395 37.13-31.838 21.424-.426 39.121 16.054 39.121 46.122-.001 38.603-43.649 56.437-73.512 85.27z" />
       </svg>
     ),
     banner:
       "https://img.freepik.com/free-vector/connecting-teams-concept-landing-page_52683-27129.jpg?w=740&t=st=1681355165~exp=1681355765~hmac=18db220a6a3dd4fed01411b1a1370a6bf2923a8256637d467eff85683e26c33f",
     overview:
-      "With this project I learn how to properly use JavaScript to have a correct user interaction",
+      "This project was design and inspired by my curiosity of developing web games and its responsiveness to mobile devices",
     description:
-      "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped to practice more responsive design",
-    link: "#",
-    codeSource: "#",
-    screenShoots: [],
-    tools: [htmlSvg, cssSvg],
-    extraResources: [
-      { freepik: "" },
-      { GithubPages: "https://pages.github.com/" },
+      "I learned more about object oriented programming by creating this simple guess game, I try as much as I can to avoid bugs and also helped me to practice more responsive design",
+    lesson:
+      "With this project I learn how to properly use JavaScript event listeners, states management and routing with hash",
+    reason:
+      "I was curious about making web games and how they can be develop using functions and objects to control media, etc",
+    features: [
+      "Sound/music",
+      "Responsiveness",
+      "Records per level",
+      "7 levels",
+      "No time limit",
     ],
-    status: "In progress",
+    installation:
+      "You can clone the site via Github or visit the site directly",
+    link: "https://jorgekerilima19.github.io/JsVanilla-game/",
+    codeSource: "https://github.com/JorgeKerilima19/JsVanilla-game",
+    screenShoots: gameImages,
+    tools: [htmlSvg, cssSvg, javascriptSvg],
+    extraResources: [
+      { Svgrepo: "https://www.svgrepo.com/" },
+      { GithubPages: "https://pages.github.com/" },
+      { Pixabay: "https://pixabay.com/" },
+    ],
+    status: "Finished",
   },
   {
     id: 3,
-    name: "Html, Css + Javascript Vanilla Portfolio",
-    image: <svg className="project-card__img"></svg>,
-    overview: "This is a fb Copy",
-  },
-  {
-    id: 4,
-    name: "React task manager",
-    image: <svg className="project-card__img"></svg>,
-    overview: "This is a fb Copy",
-  },
-  {
-    id: 5,
-    name: "Social Travel",
-    image: <svg className="project-card__img"></svg>,
-    overview:
-      "This was one of my first react application I came back to it to simplify the CSS code and proper use of React hooks",
+    name: "Techworld",
+    image: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+        className="project-card__svg"
+        fill="#be123c"
+      >
+        <path d="M10.05 18a20.46 20.46 0 00.62 4.93h6.48v-9.48h-6.57a20.55 20.55 0 00-.53 4.55z" />
+        <path
+          d="M18.85 13.45v9.48h6.48A20.46 20.46 0 0026 18a20.55 20.55 0 00-.52-4.55z"
+          fill="red"
+        />
+
+        <path d="M18 2a16 16 0 1016 16A16 16 0 0018 2zm12.22 22.71H26.6a21.8 21.8 0 01-3 6 13.86 13.86 0 01-3 .92 20.21 20.21 0 004.18-6.94h-5.92v7.15h-1.69v-7.13h-5.95a20.21 20.21 0 004.18 6.95 13.86 13.86 0 01-2.94-.9 21.8 21.8 0 01-3-6.05H5.78a13.94 13.94 0 01-.83-1.81h4a22.2 22.2 0 01-.58-4.9 21.88 21.88 0 01.48-4.55H4.76a13.88 13.88 0 01.76-1.81h3.81A22.26 22.26 0 0112.61 5a13.86 13.86 0 012.87-.84 20.13 20.13 0 00-4.4 7.45h6.09V4h1.69v7.64h6.09a20.13 20.13 0 00-4.39-7.44 13.89 13.89 0 012.87.8 22.26 22.26 0 013.27 6.59h3.77a13.89 13.89 0 01.76 1.81h-4.06a21.88 21.88 0 01.49 4.6 22.2 22.2 0 01-.57 4.93h4a13.94 13.94 0 01-.87 1.78z" />
+      </svg>
+    ),
+    logo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+        className="project-presentation__logo"
+        fill="#be123c"
+      >
+        <path d="M10.05 18a20.46 20.46 0 00.62 4.93h6.48v-9.48h-6.57a20.55 20.55 0 00-.53 4.55z" />
+        <path d="M18.85 13.45v9.48h6.48A20.46 20.46 0 0026 18a20.55 20.55 0 00-.52-4.55z" />
+        <path d="M18 2a16 16 0 1016 16A16 16 0 0018 2zm12.22 22.71H26.6a21.8 21.8 0 01-3 6 13.86 13.86 0 01-3 .92 20.21 20.21 0 004.18-6.94h-5.92v7.15h-1.69v-7.13h-5.95a20.21 20.21 0 004.18 6.95 13.86 13.86 0 01-2.94-.9 21.8 21.8 0 01-3-6.05H5.78a13.94 13.94 0 01-.83-1.81h4a22.2 22.2 0 01-.58-4.9 21.88 21.88 0 01.48-4.55H4.76a13.88 13.88 0 01.76-1.81h3.81A22.26 22.26 0 0112.61 5a13.86 13.86 0 012.87-.84 20.13 20.13 0 00-4.4 7.45h6.09V4h1.69v7.64h6.09a20.13 20.13 0 00-4.39-7.44 13.89 13.89 0 012.87.8 22.26 22.26 0 013.27 6.59h3.77a13.89 13.89 0 01.76 1.81h-4.06a21.88 21.88 0 01.49 4.6 22.2 22.2 0 01-.57 4.93h4a13.94 13.94 0 01-.87 1.78z" />
+      </svg>
+    ),
+    banner:
+      "https://img.freepik.com/free-vector/programming-languages-learning-software-coding-courses-website-development-class-script-writing-it-programmers-cartoon-characters_335657-3454.jpg?w=740&t=st=1705165157~exp=1705165757~hmac=f309ca69e9b0be2c7b34f224248c756f67bcdeb5edf5a83a9ad5c274bc01e40f",
+    overview: "A website for a design company inspired by fireart Studio",
     description:
-      "I learn how to use the hooks and also the usage of useContext hook for large applications ",
-    tools: [htmlSvg, cssSvg],
-    extraResources: [{ freepik: "" }, { GithubPages: "" }],
-  },
-  {
-    id: 6,
-    name: "React Pokedex",
-    image: <svg className="project-card__img"></svg>,
-    overview: "This is a fb Copy",
+      "With this project I reenforced my react basic knowledge and I have also learned in more depth tailwind and its applications for responsive design and more",
+    screenShoots: techSshots,
+    link: "",
+    codeSource: "https://github.com/JorgeKerilima19/TWorld",
+    tools: [reactSvg, typeScriptSvg, tailWindSvg, cssSvg],
+    extraResources: [
+      { Fireart: "https://fireart.studio/" },
+      { Svgrepo: "https://www.svgrepo.com/" },
+      { GithubPages: "https://pages.github.com/" },
+      { Pixabay: "https://pixabay.com/" },
+    ],
+    lesson:
+      "Building this project helped me a lot understanding the correct usage of tailwind and solidifying my knowledge of react and typescript",
+    installation:
+      "Clone the repository and install the dependencies using npm or yarn. Then just start the server. Or alternatively, you can visit the site hosted on GithubPages",
+    status: "Finished",
+    reason:
+      "I liked how the web of Firestudio look and I thought to myself, I think I can do this.",
+    features: ["Responsive", "Blog Page", "Components reuse"],
   },
 ];

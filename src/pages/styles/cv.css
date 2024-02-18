@@ -1,0 +1,48 @@
+.cv__icon {
+  width: 1rem;
+  height: 1rem;
+}
+.cv-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.cv-profile {
+  grid-column: span 2;
+  background-color: var(--primary-color);
+  color: var(--text-primary-color);
+  border-radius: 1rem 1rem 0 0;
+}
+.cv-profile svg path {
+  fill: currentColor;
+  stroke-width: 0;
+}
+.cv-strengths {
+  padding: 0.38rem;
+  background-color: var(--primary-color);
+  color: var(--text-primary-color);
+}
+.cv-profile__items {
+  width: 80%;
+}
+.cv-profile__img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+@media (max-width: 720px) {
+  .cv-container {
+    grid-template-columns: repeat(1, auto);
+  }
+  .cv-profile {
+    grid-column: span 1;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cv-profile__items {
+    width: 100%;
+    justify-content: center;
+  }
+}
