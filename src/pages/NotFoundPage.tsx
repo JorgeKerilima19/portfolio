@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../index.css";
-import "./styles/404.css"
+import "./styles/404.css";
 
 import img from "../svgs/404.svg";
 
@@ -10,7 +10,7 @@ export const NotFoundPage = () => {
       <h2>404 Error</h2>
       <h3>Requested page does not exists</h3>
       <img style={{ width: "50%" }} src={img} alt="" />
-      <Link to="./">
+      <Link to="/portfolio/">
         <button className="contact__form__button">Go Back to Page</button>
       </Link>
     </main>

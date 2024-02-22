@@ -14,22 +14,19 @@ export const About = () => {
 
   return (
     <section className="section__about pb-10">
-      <div className="container gap-2">
-        <h3>About me</h3>
+      <div className="flex-col gap-2">
+        <h3 className="text-subtitle text-500 text-center">About me</h3>
         <div className="container-row">
           <img src={profile} alt="" />
-          <div className="gap-2 section__about-container">
+          <div className="gap-3 section__about-container">
             <p>I am a passionate self-taught web developer.</p>
             <p>
-              My journey started out of curiosity to know how the internet and
-              computers work. Along the way I acquired new technical skills and
-              new ways of dealing with problems as well as enhancing my ability
-              to solve problems.
+              Moved by my curiosity about knowing how the internet and computers
+              work, I started my studies in this beautiful world.
             </p>
             <p>
-              My strongest strength is that I like to face situations that
-              challenges me and my skills, which will gain me more experience to
-              solve future alike problems faster.
+              I like to face situations that challenge me and my skills, which
+              will give me more experience in solving future problems faster.
             </p>
           </div>
         </div>
