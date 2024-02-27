@@ -6,6 +6,7 @@ import {
   gameImages,
   techSshots,
   JustMemories,
+  socialTravelSS,
 } from "./screenshoots";
 
 //svg's
@@ -26,6 +27,7 @@ import {
   memoriesBanner,
   socialBanner,
   techWorldBanner,
+  travelBanner,
 } from "./screenshoots/banners";
 
 type ToolLinks = { [key: string]: string };
@@ -222,5 +224,58 @@ export const projectList: Project[] = [
       "Stories Scroll buttons",
     ],
     status: "Constantly updating",
+  },
+  {
+    id: 5,
+    name: "Sky Travel",
+    logo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="project-presentation__logo"
+        viewBox="0 0 132.29 132.29"
+      >
+        <circle
+          cx="66.14"
+          cy="66.14"
+          r="61.64"
+          fill="#f60"
+          stroke="#fff"
+          stroke-width="8"
+        />
+        <path
+          fill="#fff"
+          d="M88.08 28.46v21h-3.85q-4.31-18.28-21-18.28A18.91 18.91 0 0051.19 35q-4.83 3.8-4.82 8.67a7.5 7.5 0 003.42 6.51q3.42 2.37 16.21 4.06 28 3.46 28 25.49A24.87 24.87 0 0186.72 98a24.4 24.4 0 01-18 7.31q-10.59 0-20.52-8.71l-6.56 5.62h-3.33V74.58h3.28q8.05 26.52 27.08 26.53a20.85 20.85 0 0013.13-4.6q5.9-4.59 5.9-10.78c0-3.43-1.17-6-3.51-7.78s-8.67-3.37-19-4.87q-26.33-3.84-26.32-23.43a21.1 21.1 0 017.07-16.17A24.58 24.58 0 0163.24 27a24.93 24.93 0 0118.09 7.13 26.44 26.44 0 003.84-5.63z"
+        />
+      </svg>
+    ),
+    banner: travelBanner,
+    overview:
+      "My first react project, where I studied the basics of React and single page applications (SPA)",
+    description:
+      "I wanted to test React and also to have a better understanding of SPA, with React and React-router-dom. My experience with these two technologies was amazing and it encouraged me to create my own data to display, which was fun.",
+    screenShoots: socialTravelSS,
+    link: "https://jorgekerilima19.github.io/socialtravel/",
+    codeSource: "https://github.com/JorgeKerilima19/socialtravel",
+    tools: [reactSvg, cssSvg, javascriptSvg],
+    extraResources: [
+      { Svgrepo: "https://www.svgrepo.com/" },
+      { GithubPages: "https://pages.github.com/" },
+      { Unsplash: "https://unsplash.com/" },
+    ],
+    reason:
+      "This project was designed to study the basics of React JS, and also to create my first database to store my data which will be fetched inside the application",
+    lesson:
+      "Better understanding of React and how it is different to React class components",
+    installation:
+      "Clone the repository, install the dependencies or alternatively, you can visit the site hosted with GitHub pages",
+    features: [
+      "Sliders",
+      "Multipage",
+      "Reviews",
+      "Database",
+      "Responsive",
+      "Fetch destinations",
+    ],
+    status: "Finished",
   },
 ];
