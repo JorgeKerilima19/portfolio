@@ -1,12 +1,15 @@
 import { ReactElement } from "react";
 
+//screenshots array
 import {
   SocialUnknownImages,
   gameImages,
   techSshots,
   JustMemories,
+  socialTravelSS,
 } from "./screenshoots";
 
+//svg's
 import {
   htmlSvg,
   cssSvg,
@@ -16,6 +19,16 @@ import {
   tailWindSvg,
   materialSvg,
 } from "./svgList";
+
+//banners
+
+import {
+  puzzleBanner,
+  memoriesBanner,
+  socialBanner,
+  techWorldBanner,
+  travelBanner,
+} from "./screenshoots/banners";
 
 type ToolLinks = { [key: string]: string };
 
@@ -41,7 +54,7 @@ export interface Project {
 export const projectList: Project[] = [
   {
     id: 1,
-    name: "Social Rot",
+    name: "Social Media",
     logo: (
       <svg
         className="project-presentation__logo"
@@ -55,8 +68,7 @@ export const projectList: Project[] = [
         />
       </svg>
     ),
-    banner:
-      "https://img.freepik.com/free-vector/work-office-computer-man-woman-business-character-marketing-online-employee-technology-business-man-cartoon-co-working-flat-design-freelance_1150-41790.jpg?w=826&t=st=1681354430~exp=1681355030~hmac=fefa8613276b62679b7600bcbc8857c1b511587bc38beeeb8733e17c10cf222f",
+    banner: socialBanner,
     overview:
       "A facebook copy that I created to learn the basics of HTML, CSS and Javascript. Along the way I incorporate new stuff I learn",
     description:
@@ -98,8 +110,7 @@ export const projectList: Project[] = [
         <path d="M398.325 0h-284.65c-19.23 0-34.834 15.596-34.834 34.833v442.334c0 19.237 15.604 34.832 34.833 34.832h284.651c19.229 0 34.833-15.595 34.833-34.832V34.833C433.159 15.596 417.555 0 398.325 0zM258.74 320.726c-1.055 1.012-.8.987-.8.987-.494.596-1.208.953-1.94.953h-.016c-.715 0-1.43-.357-1.924-.953 0 0 .221.025-.799-.987-29.864-28.834-73.528-46.667-73.528-85.27 0-30.068 17.732-46.549 39.138-46.122 23.228.442 34.611 16.88 37.13 31.838 2.519-14.958 13.886-31.395 37.13-31.838 21.424-.426 39.121 16.054 39.121 46.122-.001 38.603-43.649 56.437-73.512 85.27z" />
       </svg>
     ),
-    banner:
-      "https://img.freepik.com/free-vector/connecting-teams-concept-landing-page_52683-27129.jpg?w=740&t=st=1681355165~exp=1681355765~hmac=18db220a6a3dd4fed01411b1a1370a6bf2923a8256637d467eff85683e26c33f",
+    banner: puzzleBanner,
     overview:
       "This project was design and inspired by my curiosity of developing web games and its responsiveness to mobile devices",
     description:
@@ -143,8 +154,7 @@ export const projectList: Project[] = [
         <path d="M18 2a16 16 0 1016 16A16 16 0 0018 2zm12.22 22.71H26.6a21.8 21.8 0 01-3 6 13.86 13.86 0 01-3 .92 20.21 20.21 0 004.18-6.94h-5.92v7.15h-1.69v-7.13h-5.95a20.21 20.21 0 004.18 6.95 13.86 13.86 0 01-2.94-.9 21.8 21.8 0 01-3-6.05H5.78a13.94 13.94 0 01-.83-1.81h4a22.2 22.2 0 01-.58-4.9 21.88 21.88 0 01.48-4.55H4.76a13.88 13.88 0 01.76-1.81h3.81A22.26 22.26 0 0112.61 5a13.86 13.86 0 012.87-.84 20.13 20.13 0 00-4.4 7.45h6.09V4h1.69v7.64h6.09a20.13 20.13 0 00-4.39-7.44 13.89 13.89 0 012.87.8 22.26 22.26 0 013.27 6.59h3.77a13.89 13.89 0 01.76 1.81h-4.06a21.88 21.88 0 01.49 4.6 22.2 22.2 0 01-.57 4.93h4a13.94 13.94 0 01-.87 1.78z" />
       </svg>
     ),
-    banner:
-      "https://img.freepik.com/free-vector/programming-languages-learning-software-coding-courses-website-development-class-script-writing-it-programmers-cartoon-characters_335657-3454.jpg?w=740&t=st=1705165157~exp=1705165757~hmac=f309ca69e9b0be2c7b34f224248c756f67bcdeb5edf5a83a9ad5c274bc01e40f",
+    banner: techWorldBanner,
     overview: "A website for a design company inspired by fireart Studio",
     description:
       "With this project I reenforced my react basic knowledge and I have also learned in more depth tailwind and its applications for responsive design and more",
@@ -185,8 +195,7 @@ export const projectList: Project[] = [
         />
       </svg>
     ),
-    banner:
-      "https://media.istockphoto.com/id/1274274178/es/vector/entrevista-de-trabajo-en-l%C3%ADnea-los-personajes-hacen-preguntas-al-solicitante-sobre-la.jpg?s=1024x1024&w=is&k=20&c=DF8FX1sIbFTJoCUSzUJnApqKn52h_KWwSf-LoWhMqq8=",
+    banner: memoriesBanner,
     overview: "A instagram copy made with Material UI, typescript and React",
     description:
       "With this project, I understand how Material UI works and in general how styled frameworks work. I also learned a bit more about javascript to be more specific about accessing the user's camera, recording and taking photos, and being able to download them or create posts.",
@@ -215,5 +224,58 @@ export const projectList: Project[] = [
       "Stories Scroll buttons",
     ],
     status: "Constantly updating",
+  },
+  {
+    id: 5,
+    name: "Sky Travel",
+    logo: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="project-presentation__logo"
+        viewBox="0 0 132.29 132.29"
+      >
+        <circle
+          cx="66.14"
+          cy="66.14"
+          r="61.64"
+          fill="#f60"
+          stroke="#fff"
+          stroke-width="8"
+        />
+        <path
+          fill="#fff"
+          d="M88.08 28.46v21h-3.85q-4.31-18.28-21-18.28A18.91 18.91 0 0051.19 35q-4.83 3.8-4.82 8.67a7.5 7.5 0 003.42 6.51q3.42 2.37 16.21 4.06 28 3.46 28 25.49A24.87 24.87 0 0186.72 98a24.4 24.4 0 01-18 7.31q-10.59 0-20.52-8.71l-6.56 5.62h-3.33V74.58h3.28q8.05 26.52 27.08 26.53a20.85 20.85 0 0013.13-4.6q5.9-4.59 5.9-10.78c0-3.43-1.17-6-3.51-7.78s-8.67-3.37-19-4.87q-26.33-3.84-26.32-23.43a21.1 21.1 0 017.07-16.17A24.58 24.58 0 0163.24 27a24.93 24.93 0 0118.09 7.13 26.44 26.44 0 003.84-5.63z"
+        />
+      </svg>
+    ),
+    banner: travelBanner,
+    overview:
+      "My first react project, where I studied the basics of React and single page applications (SPA)",
+    description:
+      "I wanted to test React and also to have a better understanding of SPA, with React and React-router-dom. My experience with these two technologies was amazing and it encouraged me to create my own data to display, which was fun.",
+    screenShoots: socialTravelSS,
+    link: "https://jorgekerilima19.github.io/socialtravel/",
+    codeSource: "https://github.com/JorgeKerilima19/socialtravel",
+    tools: [reactSvg, cssSvg, javascriptSvg],
+    extraResources: [
+      { Svgrepo: "https://www.svgrepo.com/" },
+      { GithubPages: "https://pages.github.com/" },
+      { Unsplash: "https://unsplash.com/" },
+    ],
+    reason:
+      "This project was designed to study the basics of React JS, and also to create my first database to store my data which will be fetched inside the application",
+    lesson:
+      "Better understanding of React and how it is different to React class components",
+    installation:
+      "Clone the repository, install the dependencies or alternatively, you can visit the site hosted with GitHub pages",
+    features: [
+      "Sliders",
+      "Multipage",
+      "Reviews",
+      "Database",
+      "Responsive",
+      "Fetch destinations",
+    ],
+    status: "Finished",
   },
 ];
