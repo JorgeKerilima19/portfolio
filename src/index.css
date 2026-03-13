@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.025rem;
+  font-weight: 300;
+}
+html {
+  font-size: clamp(1.02rem, 0.8vw, 1.3rem);
+  font-family: "Roboto Flex", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --header-height: 4rem;
+  --border-color: hsl(0, 0%, 0%);
+  --complete-height: calc(100vh - var(--header-height));
+  --max-width: 80rem;
+  --primary-color: hsl(0, 75%, 50%);
+  --text-primary-color: hsl(0, 0%, 100%);
+  --text-secondary-color: hsl(0, 0%, 0%);
+  --bg-color: hsl(0, 0%, 90%);
+}
+[class^="section"] {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  min-height: var(--complete-height);
+}
+.container,
+.container-row {
+  width: min(90%, var(--max-width));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.container-row {
+  flex-direction: row;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gap-2 {
+  gap: 2em;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+#root {
+  background: url("/1.png") no-repeat fixed center;
+  background-size: cover;
+}
+.main {
+  margin: auto;
+  max-width: var(--max-width);
+}
